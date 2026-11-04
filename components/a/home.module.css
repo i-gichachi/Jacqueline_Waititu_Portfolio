@@ -1,0 +1,65 @@
+/* Home (R1), route-scoped. Every value is a token or on the 4px spacing scale. */
+
+.hero {
+  padding-block: var(--hero-pad-top) var(--hero-pad-bottom);
+}
+
+.heroGrid {
+  row-gap: 48px;
+}
+@media (min-width: 1024px) {
+  .heroGrid { row-gap: 48px; align-items: end; }
+}
+
+/* Vertical Lifecycle Rule in the portrait column (Q26 fallback). On a phone it sits after the figures,
+   where the portrait would go, at most 300px wide like the portrait. */
+.heroRule {
+  max-width: 300px;
+}
+@media (min-width: 1024px) {
+  .heroRule { max-width: none; }
+}
+
+.stripHeading {
+  margin-bottom: 16px;
+}
+
+/* Bridge: heading left, prose right from 1024px. */
+.bridgeLink {
+  margin-top: 24px;
+}
+
+/* Competencies: three ruled text columns (not cards); the pillar labels are hidden until Q10. */
+.groups {
+  margin-top: 48px;
+}
+.groupList > li {
+  padding-block: 16px;
+}
+
+/* Services preview: ruled text columns, not cards. */
+.service {
+  border-top: var(--border-rule) solid var(--fg);
+  padding-top: 24px;
+}
+.service p {
+  margin-top: 12px;
+}
+
+.footRow {
+  margin-top: 48px;
+  gap: 16px 32px;
+}
+
+/* Closing strip: the one centred block on the page. */
+.closing {
+  text-align: center;
+}
+.closing p {
+  margin-inline: auto;
+  max-width: var(--max-width-prose);
+}
+.closingActions {
+  justify-content: center;
+  margin-top: 32px;
+}

@@ -1,0 +1,10 @@
+{
+  "_note": "Launch blockers held until closed. Set closed to true (with a date in closedOn) only when the item is resolved.",
+  "items": [
+    { "id": "Q35", "what": "Privacy commitments confirmed by the client", "owner": "client", "closed": false },
+    { "id": "Q36", "what": "Retention periods confirmed by the client", "owner": "client", "closed": false },
+    { "id": "Q37", "what": "Privacy reply time confirmed by the client", "owner": "client", "closed": false },
+    { "id": "I14", "what": "Hosting and email providers named, with retention", "owner": "Ian", "closed": false },
+    { "id": "a:P10", "what": "Recorded QA check that nothing from Google Analytics or Calendly loads before the visitor's click", "owner": "QA", "closed": false }
+  ]
+}

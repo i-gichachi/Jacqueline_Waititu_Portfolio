@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+app/tokens.css
+app/generated/
+
+# Secrets and local build output (Stage 7)
+.env*
+.next-*/
+*.log
+.playwright-mcp/

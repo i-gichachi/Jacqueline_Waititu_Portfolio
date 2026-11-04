@@ -1,0 +1,40 @@
+/* Batch C route styles (/track-record and the case pages). Tokens only; spacing on the 4px scale. */
+
+.lifecycle { margin-top: 48px; }
+@media (min-width: 1024px) { .lifecycle { margin-top: 64px; } }
+
+.summary { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--rule); }
+@media (min-width: 1024px) { .summary { margin-top: 96px; } }
+
+/* Approach: one group per phase, a hairline above each */
+.groups { margin-top: 48px; }
+.group { border-top: 1px solid var(--rule); padding-top: 24px; }
+.group > * + * { margin-top: 16px; }
+.group > p, .group > ul { max-width: var(--max-width-prose); }
+
+/* Outcomes: the figure large (decorative; the sentence carries it), the full sentence under it */
+.outcomes { list-style: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; margin-top: 48px; }
+@media (min-width: 1024px) {
+  .outcomes { gap: 48px var(--grid-gap); }
+  .outcomes3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .outcomes2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.outcomes > li { min-width: 0; border-top: 1px solid var(--rule); padding-top: 24px; }
+.outcomeFig { display: flex; align-items: flex-start; flex-wrap: wrap; }
+.outcomeText { margin-top: 16px; max-width: var(--max-width-prose); }
+.outcomeText strong { font-weight: 600; }
+.outcomesNote { margin-top: 40px; max-width: var(--max-width-prose); }
+
+/* The closing strip and CTA band: the one centred block on the page */
+.strip { text-align: center; }
+.strip h2 { max-width: 24ch; margin-inline: auto; }
+.strip .stripText { max-width: var(--max-width-prose); margin: 16px auto 0; color: var(--fg-muted); }
+.strip .stripActions { justify-content: center; margin-top: 32px; }
+
+/* Cards */
+.cards { margin-top: 48px; }
+.cards > li { list-style: none; }
+
+.pager { margin-top: 64px; }
+
+.takeaway { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--rule); }
