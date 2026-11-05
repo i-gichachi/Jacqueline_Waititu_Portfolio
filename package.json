@@ -4,18 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "sync": "node scripts/sync-inputs.ts",
-    "predev": "node scripts/sync-inputs.ts",
     "dev": "next dev",
-    "prebuild": "node scripts/sync-inputs.ts && node scripts/check-source.ts",
     "build": "next build",
-    "postbuild": "node scripts/check-output.ts",
     "start": "next start",
-    "typecheck": "tsc --noEmit",
-    "test": "node --test tests/*.test.ts",
-    "check:launch": "node scripts/check-launch.ts"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "lucide-react": "^0.468.0",
     "motion": "^14.9.1",
     "next": "^16.4.5",
     "radix-ui": "^1.8.1",

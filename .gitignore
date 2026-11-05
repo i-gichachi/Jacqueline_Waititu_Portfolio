@@ -11,3 +11,4 @@ app/generated/
 .next-*/
 *.log
 .playwright-mcp/
+.next-*/

@@ -36,14 +36,13 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    ".next-qa/types/**/*.ts",
-    ".next-qa/dev/types/**/*.ts",
-    ".next-qa-preview/types/**/*.ts",
-    ".next-qa-preview/dev/types/**/*.ts",
-    ".next-rubric/types/**/*.ts",
-    ".next-rubric/dev/types/**/*.ts"
+    ".next-final/types/**/*.ts",
+    ".next-final/dev/types/**/*.ts",
+    ".next-v3/types/**/*.ts",
+    ".next-v3/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next-*"
   ]
 }
