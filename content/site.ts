@@ -117,8 +117,8 @@ export const aboutBridge = {
   eyebrow: 'About Me',
   heading: 'From the service floor to the General Manager’s office, inside one growing operation.',
   paragraphs: [
-    'I began in 2008 on the front line: a BPO service desk, a telecoms dealer line and a bank branch. In 2010 I joined Ecom Services Ltd as a team leader, and by 2012 I was its General Manager.',
-    'Over the next nine years I grew a five-person start-up into a 103-person operation and built its HR, finance, compliance and trust and safety functions. When Social Discovery Group acquired the company in 2021, I led the due diligence, the integration and, later, the closure. I bring that full lifecycle to General Manager and Head of Operations roles, and to organisations that need the same structure built for them.',
+    'My career began in 2008 on the front line: a BPO service desk, a telecoms dealer line and a bank branch. In 2010 I joined Ecom Services Ltd as a team leader; by 2012, I was its General Manager.',
+    'Over the next nine years I grew a five-person start-up into a 103-person operation and built its HR, finance, compliance and trust and safety functions. When Social Discovery Group acquired the company in 2021, I led the due diligence, the integration and, later, the closure. That full lifecycle is what I bring to General Manager and Head of Operations roles, and to organisations that need the same structure built for them.',
   ],
   facts: [
     { label: 'Based in', value: 'Nairobi, Kenya' },

@@ -1,4 +1,4 @@
-/* Five case studies, from her intake (Case Studies 1 to 5) and CV. Figures are hers. */
+/* Five case studies, from the client intake (Case Studies 1 to 5) and CV. Figures are the client's own. */
 
 import type { Metric } from './site.ts';
 
@@ -34,20 +34,20 @@ export const cases: CaseStudy[] = [
     location: 'Nairobi, Kenya',
     scope: ['HR', 'Finance & Audit', 'Procurement', 'Technology'],
     summary:
-      'After Social Discovery Group acquired Ecom Services Ltd in August 2021, the Kenya office had one year to meet the group’s global standards without losing clients, people or compliance. I led the integration directly with the acquirer’s leadership as six workstreams: HR, finance and audit, procurement, operations, technology and stakeholders. Two audit cycles, July to June and January to December, ran in parallel. The office was fully integrated within the earn-out, with 100% of key clients retained and the team stable throughout.',
+      'After Social Discovery Group acquired Ecom Services Ltd in August 2021, the Kenya office had one year to meet the group’s global standards without losing clients, people or compliance. Working directly with the acquirer’s leadership, I ran the integration as six workstreams: HR, finance and audit, procurement, operations, technology and stakeholders. Two audit cycles, July to June and January to December, ran in parallel. By the end of the earn-out, the office was fully integrated, with 100% of key clients retained and the team stable throughout.',
     metrics: [
       { value: 100, suffix: '%', label: 'Key clients retained through the earn-out' },
       { value: 2, label: 'Audit cycles run in parallel' },
       { value: 12, label: 'Months to full integration', suffix: '' },
     ],
     context:
-      'Social Discovery Group acquired Ecom Services Ltd in August 2021, after a four-month due diligence I had supported as General Manager. The Kenya office then entered a one-year earn-out and integration period, from September 2021 to August 2022. The operation served international clients, and it had to keep running at full service while its owners, systems and standards changed around it. I led the integration directly with the acquiring company’s leadership, so the Kenya side of every decision ran through one accountable point. The earn-out set the clock: every workstream had to land inside those twelve months, and the clients and the team had to come through it intact.',
+      'Social Discovery Group acquired Ecom Services Ltd in August 2021, after a four-month due diligence I had supported as General Manager. The Kenya office then entered a one-year earn-out and integration period, from September 2021 to August 2022. The operation served international clients, and it had to keep running at full service while its owners, systems and standards changed around it. My role was to lead the integration directly with the acquiring company’s leadership, so the Kenya side of every decision ran through one accountable point. The earn-out set the clock: every workstream had to land inside those twelve months, and the clients and the team had to come through it intact.',
     challenge:
-      'I had to align the operation with the acquirer’s global standards across HR, finance, procurement, compliance and reporting, while keeping the business running and employees stable. Every change also had to remain compliant with Kenyan requirements, so group policy could not simply be copied across: contracts and benefits had to satisfy Kenyan labour law and the group’s standards at the same time. The hardest constraint was the calendar. The office ran a July to June audit cycle and the acquirer a January to December one, and both had to be met at once, with full documentation and compliance for each. Underneath all of it sat a team that needed to understand what was changing, and why.',
+      'The task was to align the operation with the acquirer’s global standards across HR, finance, procurement, compliance and reporting, while keeping the business running and employees stable. Every change also had to remain compliant with Kenyan requirements, so group policy could not simply be copied across: contracts and benefits had to satisfy Kenyan labour law and the group’s standards at the same time. The hardest constraint was the calendar. The office ran a July to June audit cycle and the acquirer a January to December one, and both had to be met at once, with full documentation and compliance for each. Underneath all of it sat a team that needed to understand what was changing, and why.',
     approach: [
       {
         title: 'Integration as workstreams',
-        body: 'I led the integration directly with the acquiring company’s leadership and organised it as workstreams, each aligned to the global standard and checked against Kenyan requirements. In operations I reviewed workflows, reporting lines and documentation standards to fit the Kenya office into the global operating structure. In procurement I aligned vendor management and approval structures with the group’s procurement policies.',
+        body: 'The integration was organised as workstreams, each aligned to the global standard, checked against Kenyan requirements and agreed directly with the acquiring company’s leadership. In operations, I reviewed workflows, reporting lines and documentation standards so the Kenya office fitted the global operating structure. Procurement followed the same pattern, with vendor management and approval structures aligned to the group’s procurement policies.',
       },
       {
         title: 'People and finance first',
@@ -55,7 +55,7 @@ export const cases: CaseStudy[] = [
       },
       {
         title: 'Systems and stakeholders',
-        body: 'I coordinated the move of internal systems, communication tools and reporting platforms, including Google Chat to Slack, and directed the workflow transitions, technology adoption, policy harmonisation and reporting realignment that came with it. Throughout, I handled employee communication and change management, and represented the Kenya office at global management summits and leadership sessions to support knowledge transfer.',
+        body: 'Internal systems, communication tools and reporting platforms had to move as well, including Google Chat to Slack. I coordinated that move and directed the workflow transitions, technology adoption, policy harmonisation and reporting realignment that came with it. Employee communication and change management stayed with me throughout, and I represented the Kenya office at global management summits and leadership sessions to support knowledge transfer.',
       },
     ],
     quantitative: [
@@ -86,20 +86,20 @@ export const cases: CaseStudy[] = [
     location: 'Nairobi, Kenya',
     scope: ['Due Diligence', 'Finance', 'Legal & Statutory', 'Change Communication'],
     summary:
-      'In 2021 the original owners of Ecom Services Ltd negotiated the sale of the business to Social Discovery Group, in the middle of the COVID-19 pandemic. As General Manager, I compiled and submitted the records the buyer required, including five years of audited accounts, employee records since inception and statutory compliance documentation, while keeping the team informed about job security, benefits and change. The four-month due diligence closed with the sale signed in August 2021, the records commended by stakeholders and zero employee attrition.',
+      'In 2021 the original owners of Ecom Services Ltd negotiated the sale of the business to Social Discovery Group during the COVID-19 pandemic. My job as General Manager was to compile and submit the records the buyer required, including five years of audited accounts, employee records since inception and statutory compliance documentation, and to keep the team informed about job security, benefits and change. Four months of due diligence ended with the sale signed in August 2021, the records commended by stakeholders and zero employee attrition.',
     metrics: [
       { value: 5, label: 'Years of audited accounts prepared' },
       { value: 4, label: 'Months of due diligence' },
       { value: 0, label: 'Employee attrition during the sale' },
     ],
     context:
-      'In 2021 the original owners of Ecom Services Ltd began negotiations to sell the business to a prospective buyer, Social Discovery Group. I had been General Manager since July 2012 and had built much of what the buyer was now assessing, from the HR function to the company’s first dedicated office. The sale required extensive due diligence across several years of financial, operational and employee records. It took place during the COVID-19 pandemic, after the March 2020 move to remote work, so the business was being examined in detail while it was still operating in a very different way from the one its records described.',
+      'In 2021 the original owners of Ecom Services Ltd began negotiations to sell the business to a prospective buyer, Social Discovery Group. By then I had been General Manager since July 2012, and much of what the buyer was now assessing, from the HR function to the company’s first dedicated office, was work I had built. The sale required extensive due diligence across several years of financial, operational and employee records. It took place during the COVID-19 pandemic, after the March 2020 move to remote work, so the business was being examined in detail while it was still operating in a very different way from the one its records described.',
     challenge:
       'The buyer asked for documentation across the whole company, from shareholder and registration records to supplier contracts, asset schedules, leases and remuneration history. Every document had to be complete, consistent and ready when requested, while the business kept operating as normal. The people side was just as demanding. A sale creates uncertainty, and the pandemic had already supplied plenty of it. Employees had reasonable questions about job security, benefits and organisational change, and a team that loses confidence during due diligence can start to lose people, which weakens the very business being sold. The organisation had to stay stable and reassured until the agreement was signed.',
     approach: [
       {
         title: 'Compile the record',
-        body: 'I compiled and organised the documentation the buyer required, starting with the financial and corporate record: five years of audited financial accounts, shareholder records and registration documentation, supplier contracts and asset schedules. Each set was prepared and submitted as requested, so the buyer’s review could move at its own pace rather than wait on ours.',
+        body: 'The financial and corporate record came first: five years of audited financial accounts, shareholder records and registration documentation, supplier contracts and asset schedules. I compiled and organised each set and submitted it as requested, so the buyer’s review could move at its own pace rather than wait on ours.',
       },
       {
         title: 'Open the people file',
@@ -107,7 +107,7 @@ export const cases: CaseStudy[] = [
       },
       {
         title: 'Keep the team informed',
-        body: 'In parallel I managed internal communication with employees, giving clarity on the acquisition process and addressing concerns about job security, benefits and organisational change. I kept the process transparent across teams and maintained operational continuity throughout the transaction period, so the operation kept serving its clients normally while the sale progressed.',
+        body: 'Alongside the paperwork ran the conversation with employees. I managed internal communication on the acquisition process and addressed concerns about job security, benefits and organisational change. Transparency across teams and operational continuity were mine to maintain throughout the transaction period, and the operation kept serving its clients normally while the sale progressed.',
       },
     ],
     quantitative: [
@@ -137,7 +137,7 @@ export const cases: CaseStudy[] = [
     location: 'Nairobi, Kenya',
     scope: ['Business Continuity', 'IT & Assets', 'Health & Safety', 'Facilities'],
     summary:
-      'In early 2020, 80 employees at Ecom Services Ltd supported international clients around the clock when COVID-19 reached Kenya. I acted before the national lockdowns: health measures first, then equipment, training and asset controls for the whole company. Every employee was working remotely within three weeks, effective 23 March 2020. Service ran uninterrupted across two years of remote operations, no employee infections were recorded, and I negotiated a 33.33% rent reduction while the office stood empty.',
+      'When COVID-19 reached Kenya in early 2020, 80 employees at Ecom Services Ltd were supporting international clients around the clock. My response started before the national lockdowns: health measures first, then equipment, training and asset controls for the whole company. Within three weeks every employee was working remotely, effective 23 March 2020. Service ran uninterrupted across two years of remote operations and no employee infections were recorded. With the office standing empty, I negotiated a 33.33% rent reduction.',
     metrics: [
       { value: 80, label: 'Employees remote within three weeks' },
       { value: 33.33, decimals: 2, suffix: '%', label: 'Rent reduction negotiated' },
@@ -150,15 +150,15 @@ export const cases: CaseStudy[] = [
     approach: [
       {
         title: 'Protect people early',
-        body: 'Between January and March 2020, before the national lockdowns, I put sanitisation protocols and mandatory masking in place. Acting early gave the company time to protect people while it prepared properly for remote work, rather than reacting once restrictions arrived. No employee infections were recorded, and I credit that to these early health and safety measures.',
+        body: 'Between January and March 2020, before the national lockdowns, I put sanitisation protocols and mandatory masking in place. Acting early gave the company time to protect people while it prepared properly for remote work, rather than reacting once restrictions arrived. No employee infections were recorded, which I credit to these early health and safety measures.',
       },
       {
         title: 'Equip the whole company',
-        body: 'In parallel I prepared the whole company for remote work. I ran employee training, procured laptops and set up 85 laptops, 100 additional screens and 85 UPS units, then configured all software and system access. Once the team was working remotely, power interruptions caused no service downtime, and the international clients kept their round-the-clock cover.',
+        body: 'Preparation for remote work ran in parallel and covered the whole company. I ran the employee training and procured the laptops, then set up 85 laptops, 100 additional screens and 85 UPS units and configured all software and system access. Once the team was working remotely, power interruptions caused no service downtime, and the international clients kept their round-the-clock cover.',
       },
       {
         title: 'Control assets, cost and the return',
-        body: 'I built an asset management process with documentation to track every item issued, so accountability existed from the first day of remote work. While the office stood empty, I negotiated a 33.33% rent waiver. Before the return, I ran compliance assessments and introduced protocols aligned with government guidelines, including social distancing, sanitation and workspace adjustments.',
+        body: 'Every item issued was tracked through an asset management process I built, with documentation, so accountability existed from the first day of remote work. While the office stood empty, I negotiated a 33.33% rent waiver. The return was planned with the same care, through compliance assessments and protocols aligned with government guidelines, including social distancing, sanitation and workspace adjustments.',
       },
     ],
     quantitative: [
@@ -189,7 +189,7 @@ export const cases: CaseStudy[] = [
     location: 'Nairobi, Kenya',
     scope: ['Vendor Governance', 'Facilities', 'ICT Infrastructure', 'Budget Control'],
     summary:
-      'The operation outgrew its serviced office in 2016, then its own office again by 2023. I led both projects: the company’s first dedicated office for 80 employees, delivered in three months for KES 10 million, and a KES 15 million expansion into the opposite wing that added 25 seats in two and a half months. No contract was awarded without comparing at least three quotations. Together the projects delivered KES 25 million of infrastructure, the first under budget and the second within it.',
+      'The operation outgrew its serviced office in 2016, then its own office again by 2023. Both projects were mine to lead: the company’s first dedicated office for 80 employees, delivered in three months for KES 10 million, and a KES 15 million expansion into the opposite wing that added 25 seats in two and a half months. No contract was awarded without comparing at least three quotations. Together the projects delivered KES 25 million of infrastructure, the first under budget and the second within it.',
     metrics: [
       { value: 25, prefix: 'KES ', suffix: 'M', label: 'Infrastructure delivered within budget' },
       { value: 3, label: 'Months to the first dedicated office' },
@@ -202,15 +202,15 @@ export const cases: CaseStudy[] = [
     approach: [
       {
         title: 'Govern the vendors',
-        body: 'I made vendor governance the foundation of both projects. For every scope of work I screened proposals and compared quotations from at least three vendors before awarding a contract, keeping pricing competitive and quality accountable. Once contracts were signed, I coordinated all stakeholders and supervised delivery against timeline, quality and budget myself, rather than leaving the build to the contractors.',
+        body: 'Vendor governance was the foundation of both projects. No contract was awarded until I had screened proposals and compared quotations from at least three vendors for that scope of work, which kept pricing competitive and quality accountable. Once contracts were signed, my role shifted to coordinating all stakeholders and personally supervising delivery against timeline, quality and budget, rather than leaving the build to the contractors.',
       },
       {
         title: 'Build the first office',
-        body: 'In 2016 I led the end-to-end establishment of the organisation’s first fully customised office, covering interior works, furniture, electrical installations and complete ICT infrastructure. The KES 10 million project was delivered in three months and under budget, with workstations and operational systems in place for 80 employees and an uninterrupted move from the serviced office.',
+        body: 'The 2016 project was the organisation’s first fully customised office, and I led it end to end: interior works, furniture, electrical installations and complete ICT infrastructure. Delivered in three months and under budget, the KES 10 million project put workstations and operational systems in place for 80 employees, with an uninterrupted move from the serviced office.',
       },
       {
         title: 'Expand into the opposite wing',
-        body: 'In 2023 I led the acquisition and renovation of the wing opposite the existing office. The KES 15 million project covered interior design, custom desk fabrication, a boardroom, soundproof meeting rooms, electrical installations, air conditioning and networking integrated with the existing server room. It was completed in two and a half months, within budget, and added 25 seats.',
+        body: 'In 2023 the company took the wing opposite the existing office, and I led its acquisition and renovation. The KES 15 million project covered interior design, custom desk fabrication, a boardroom, soundproof meeting rooms, electrical installations, air conditioning and networking integrated with the existing server room. Completed in two and a half months and within budget, it added 25 seats.',
       },
     ],
     quantitative: [
@@ -241,7 +241,7 @@ export const cases: CaseStudy[] = [
     location: 'Nairobi, Kenya',
     scope: ['Policy', 'Performance', 'Talent', 'Digital HR'],
     summary:
-      'As Ecom Services Ltd grew from 5 to more than 100 people, its people processes fell behind: undefined roles, no formal HR policies, annual reviews and mostly paper records. I built the HR function as one connected system, from job descriptions and the first Employee Handbook to quarterly appraisals, competency-based hiring, wellness benefits and the Akira HRMS I co-built with ICT. Akira cut HR administration and manual record-keeping by more than 75%, and the structure carried the operation through its growth.',
+      'As Ecom Services Ltd grew from 5 to more than 100 people, its people processes fell behind: undefined roles, no formal HR policies, annual reviews and mostly paper records. My answer was to build the HR function as one connected system, from job descriptions and the first Employee Handbook to quarterly appraisals, competency-based hiring, wellness benefits and the Akira HRMS, co-built with ICT. Akira cut HR administration and manual record-keeping by more than 75%, and the structure carried the operation through its growth.',
     metrics: [
       { value: 75, suffix: '%+', label: 'Less HR administration through Akira HRMS' },
       { value: 103, from: 5, label: 'People supported by the structure' },
@@ -250,19 +250,19 @@ export const cases: CaseStudy[] = [
     context:
       'Ecom Services Ltd grew from 5 to 103 people during my time as General Manager, and its people processes did not keep pace with the operation. Roles lacked defined responsibilities. There were no formal HR policies. Performance was reviewed only once a year, recruitment relied on basic screening and most records were kept on paper. With a handful of employees, those gaps were manageable. With a growing team working shifts for international clients, they began to affect accountability, compliance and the quality of every hiring decision, and the business needed a people function that could grow with it.',
     challenge:
-      'Without structure, accountability, compliance and scaling all became difficult. Managers had little view of performance between annual reviews, hiring rested on inconsistent screening, and paper records made leave, sick days and reporting slow to administer. Whatever replaced the old processes had to pass two tests at once: the operation’s needs and Kenyan labour law. It also had to be built while the company kept hiring. So I worked with department leads, the ICT team and an external HR consultant, and designed the function as one system, with each part feeding the next, rather than a set of separate fixes.',
+      'Without structure, accountability, compliance and scaling all became difficult. Managers had little view of performance between annual reviews, hiring rested on inconsistent screening, and paper records made leave, sick days and reporting slow to administer. Whatever replaced the old processes had to pass two tests at once: the operation’s needs and Kenyan labour law. It also had to be built while the company kept hiring. My approach was to work with department leads, the ICT team and an external HR consultant, and to design the function as one system, with each part feeding the next, rather than a set of separate fixes.',
     approach: [
       {
         title: 'Role and policy foundations',
-        body: 'I wrote job descriptions for every role, then created the company’s first HR policy framework and Employee Handbook. To keep them current with Kenyan labour law, I set a biennial policy review with an external HR consultant. I also oversaw grievance, disciplinary and conflict-management processes with accurate records, so employee-relations issues were handled consistently and could stand up to scrutiny.',
+        body: 'The starting point was a job description for every role, which I wrote before creating the company’s first HR policy framework and Employee Handbook. To keep them current with Kenyan labour law, I set a biennial policy review with an external HR consultant. Grievance, disciplinary and conflict-management processes ran under my oversight with accurate records, so employee-relations issues were handled consistently and could stand up to scrutiny.',
       },
       {
         title: 'Performance and talent',
-        body: 'I created a Quality & Performance Management function with PIP and PMP processes and standardised evaluation criteria. Annual reviews became quarterly appraisals, supported by monthly one-to-ones between managers and their teams that include development conversations. Hiring changed too: basic screening gave way to competency-based interviews and psychometric assessments, with consistent evaluation criteria agreed with hiring managers.',
+        body: 'Performance needed its own home, so I created a Quality & Performance Management function with PIP and PMP processes and standardised evaluation criteria. Annual reviews became quarterly appraisals, supported by monthly one-to-ones between managers and their teams that include development conversations. Hiring changed too: basic screening gave way to competency-based interviews and psychometric assessments, with consistent evaluation criteria agreed with hiring managers.',
       },
       {
         title: 'Workforce, experience and digital HR',
-        body: 'I designed team structures, reporting lines, departments and shift patterns, including the move to 24-hour coverage, and introduced engagement programmes, training, coaching, seven wellness and mental health days a year and a mother’s room. With the ICT team I co-built the Akira HRMS to automate leave, wellness-day and sick-leave administration and give managers one view of team records.',
+        body: 'On the workforce side, I designed team structures, reporting lines, departments and shift patterns, including the move to 24-hour coverage. The employee experience gained engagement programmes, training, coaching, seven wellness and mental health days a year and a mother’s room. With the ICT team, I co-built the Akira HRMS to automate leave, wellness-day and sick-leave administration and give managers one view of team records.',
       },
     ],
     quantitative: [
