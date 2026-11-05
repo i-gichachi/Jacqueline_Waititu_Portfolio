@@ -8,7 +8,8 @@ import { cta, nav, site } from '../../content/site.ts';
 
 /**
  * Sticky header. Over the home hero it starts transparent on ink; once scrolled (or on any other page)
- * it becomes a porcelain bar with a hairline. Mobile: full-height sheet menu.
+ * it becomes a porcelain bar with a hairline. Mobile: full-height sheet menu, rendered as a sibling of the
+ * header (not inside it): the header's backdrop blur would otherwise trap the fixed sheet inside the 64px bar.
  */
 export function Header() {
   const pathname = usePathname();
@@ -35,6 +36,7 @@ export function Header() {
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow] duration-500 ${
         overInk
@@ -81,11 +83,12 @@ export function Header() {
           {open ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
         </button>
       </div>
+    </header>
 
       <div
         id="mobile-menu"
         hidden={!open}
-        className="on-ink fixed inset-x-0 top-16 bottom-0 overflow-y-auto bg-ink text-on-ink lg:hidden"
+        className="on-ink fixed inset-x-0 top-16 bottom-0 z-[45] overflow-y-auto overscroll-contain bg-ink text-on-ink lg:hidden"
       >
         <nav aria-label="Mobile" className="container-x flex min-h-full flex-col py-6">
           <ul className="divide-y divide-line-ink border-y border-line-ink">
@@ -113,6 +116,6 @@ export function Header() {
         </nav>
       </div>
       <style>{`@keyframes menuIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}`}</style>
-    </header>
+    </>
   );
 }
