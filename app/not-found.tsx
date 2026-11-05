@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button.tsx';
 
 export const metadata: Metadata = {
   title: 'Page not found',
-  description: 'This address has no page on Jacqueline Waititu’s site. Her case studies are on the Track Record page.',
+  description: 'This address has no page on my site. My case studies are on the Track Record page.',
   robots: { index: false, follow: true },
 };
 

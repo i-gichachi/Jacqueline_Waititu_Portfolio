@@ -22,7 +22,7 @@ export const site = {
   responseTime: 'Replies within 24 to 48 hours',
   url: (process.env.SITE_URL ?? 'https://jacqueline-waititu.vercel.app').replace(/\/$/, ''),
   description:
-    'Jacqueline Waititu is a General Manager and Operations Leader with 18+ years building, scaling and integrating operations, from a five-person start-up to a 103-person business acquired by Social Discovery Group.',
+    'I am Jacqueline Waititu, a General Manager and Operations Leader with 18+ years building, scaling and integrating operations, from a five-person start-up to a 103-person business acquired by Social Discovery Group.',
 } as const;
 
 export const nav = [
@@ -62,7 +62,7 @@ export interface Metric {
 
 export const headlineMetrics: Metric[] = [
   { value: 18, suffix: '+', label: 'Years in operations leadership', detail: 'From the service floor to General Manager' },
-  { value: 103, from: 5, label: 'People in the operation she built', detail: 'Grown from a five-person start-up' },
+  { value: 103, from: 5, label: 'People in the operation I built', detail: 'Grown from a five-person start-up' },
   { value: 75, suffix: '%', label: 'Lift in processing throughput', detail: 'Within three months, through AI workflow automation' },
   { value: 100, suffix: '%', label: 'Key clients retained', detail: 'Through the acquisition earn-out period' },
 ];
@@ -114,7 +114,7 @@ export const organisations = [
 
 /** Home about bridge. */
 export const aboutBridge = {
-  eyebrow: 'About Jacqueline',
+  eyebrow: 'About Me',
   heading: 'From the service floor to the General Manager’s office, inside one growing operation.',
   paragraphs: [
     'I began in 2008 on the front line: a BPO service desk, a telecoms dealer line and a bank branch. In 2010 I joined Ecom Services Ltd as a team leader, and by 2012 I was its General Manager.',

@@ -154,7 +154,7 @@ export const leadershipPrinciples = [
   {
     icon: 'users',
     title: 'People through change',
-    body: 'Every sale, migration and closure she has led was run with the team informed and the service intact.',
+    body: 'Every sale, migration and closure I have led was run with the team informed and the service intact.',
   },
   {
     icon: 'file-check',

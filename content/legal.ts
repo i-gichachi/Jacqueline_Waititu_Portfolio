@@ -31,7 +31,7 @@ export const privacy: LegalDoc = {
     'What this site collects, why, who else handles it and how to ask for your information. The short version: very little, and nothing optional without your say.',
   metaTitle: 'Privacy Policy',
   description:
-    'How Jacqueline Waititu’s site handles personal information: cookie choices, the Calendly booking calendar, CV downloads and email, and how to make a privacy request.',
+    'How my site handles personal information: cookie choices, the Calendly booking calendar, CV downloads and email, and how to make a privacy request.',
   updated: '5 November 2026',
   sections: [
     {
@@ -172,7 +172,7 @@ export const terms: LegalDoc = {
     'The terms for using this site: what its content is and is not, how you may reuse it and which law applies.',
   metaTitle: 'Terms of Use',
   description:
-    'The terms for using Jacqueline Waititu’s site: what its content is and is not, how case studies and testimonials may be quoted, third-party services and how to get in touch.',
+    'The terms for using my site: what its content is and is not, how case studies and testimonials may be quoted, third-party services and how to get in touch.',
   updated: '5 November 2026',
   sections: [
     {

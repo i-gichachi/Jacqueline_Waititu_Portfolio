@@ -4,7 +4,7 @@ import { Booking } from '../../components/connect/Booking.tsx';
 import { NextSteps } from '../../components/connect/NextSteps.tsx';
 
 const description =
-  'Book a consultation with Jacqueline Waititu, General Manager and Operations Leader, about senior operations roles or advisory work. Email, phone, LinkedIn and CV.';
+  'Book a consultation with me about senior operations roles or advisory work. Calendly booking, email, phone, LinkedIn and my CV.';
 
 export const metadata: Metadata = {
   title: 'Book a Consultation',

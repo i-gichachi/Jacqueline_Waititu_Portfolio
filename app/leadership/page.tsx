@@ -12,7 +12,7 @@ import { IconTile } from '../../components/ui/Icon.tsx';
 import { SectionHeading } from '../../components/ui/SectionHeading.tsx';
 
 const description =
-  'Jacqueline Waititu’s career, from customer service in 2008 to General Manager of a Kenya operation she led from start-up through a sale and integration, with her education and certifications.';
+  'My career, from customer service in 2008 to General Manager of a Kenya operation I led from start-up through a sale and integration, with my education and certifications.';
 
 export const metadata: Metadata = {
   title: 'Leadership and Career',
@@ -36,7 +36,7 @@ export default function LeadershipPage() {
           </div>
           <div className="mt-8 lg:mt-10">
             <h2 className="flex items-center gap-4 font-sans text-xs font-semibold tracking-[0.16em] text-muted uppercase after:h-px after:flex-1 after:bg-line">
-              How she leads
+              How I lead
             </h2>
             <ul className="mt-5 grid gap-4 md:grid-cols-3 lg:gap-6">
               {leadershipPrinciples.map((p, i) => (
@@ -60,7 +60,7 @@ export default function LeadershipPage() {
           <SectionHeading
             tone="ink"
             eyebrow="Testimonials"
-            title={<span id="testimonials-title">In the words of the people she has worked with</span>}
+            title={<span id="testimonials-title">In the words of the people I have worked with</span>}
           />
           <div className="mt-10 lg:mt-14">
             <Testimonials items={testimonials} />

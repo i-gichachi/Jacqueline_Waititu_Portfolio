@@ -8,7 +8,7 @@ import { Reveal } from '../../components/motion/Reveal.tsx';
 import { SectionHeading } from '../../components/ui/SectionHeading.tsx';
 
 const description =
-  'Jacqueline Waititu’s operations capabilities in three pillars, Build and Scale, Transform and Integrate, Govern and Protect, each with her method and a result from her record.';
+  'My operations capabilities in three pillars, Build and Scale, Transform and Integrate, Govern and Protect, each with my method and a result from my record.';
 
 export const metadata: Metadata = {
   title: 'Operations Capabilities',

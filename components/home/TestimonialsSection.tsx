@@ -11,7 +11,7 @@ export function TestimonialsSection() {
         <SectionHeading
           tone="ink"
           eyebrow="Testimonials"
-          title={<span id="testimonials-title">In the words of those who know her work</span>}
+          title={<span id="testimonials-title">In the words of those who know my work</span>}
         />
         <Reveal delay={120} className="mt-10 border-t border-line-ink pt-10 lg:mt-12 lg:pt-12">
           <Testimonials items={testimonials} />
