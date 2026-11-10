@@ -26,17 +26,10 @@ export const site = {
 } as const;
 
 /**
- * True once site.calendly is a real event link (it has a path, e.g. https://calendly.com/name/consultation).
- * While it is the bare https://calendly.com placeholder, Connect runs email-only: the booking grid and the
- * Calendly button stay hidden and email and phone are the booking route. Setting the link is the only change needed.
+ * The Calendly booking grid always shows on Connect (standard: Connect serves recruiters and clients alike).
+ * Until the client sends her event link, site.calendly stays the https://calendly.com placeholder.
  */
-export const hasBookingLink = (() => {
-  try {
-    return new URL(site.calendly).pathname.replace(/\/+$/, '').length > 0;
-  } catch {
-    return false;
-  }
-})();
+export const hasBookingLink = true;
 
 export const nav = [
   { href: '/leadership', label: 'Leadership' },
