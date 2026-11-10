@@ -27,7 +27,7 @@ export function PillarSection({ pillar, tone }: { pillar: Pillar; tone: 'paper' 
             <ul className="mt-6 hidden border-t border-line lg:block">
               {pillar.competencies.map((c) => (
                 <li key={c.title} className="border-b border-line">
-                  <a href={`#${slug(c.title)}`} className="group flex min-h-11 items-center gap-3 py-2.5 text-sm text-muted transition-colors hover:text-text">
+                  <a href={`#${slug(c.title)}`} className="group flex min-h-11 items-center gap-3 py-2.5 text-small text-muted transition-colors hover:text-text">
                     <span aria-hidden="true" className="h-px w-3 bg-brick transition-all duration-300 group-hover:w-5" />
                     {c.title}
                   </a>
@@ -43,16 +43,16 @@ export function PillarSection({ pillar, tone }: { pillar: Pillar; tone: 'paper' 
               <div className="p-6 sm:p-8 lg:p-9">
                 <div className="flex items-start gap-4">
                   <IconTile name={c.icon} />
-                  <h3 className="pt-1 text-h3 sm:text-[1.5rem]">{c.title}</h3>
+                  <h3 className="pt-1 text-h3">{c.title}</h3>
                 </div>
-                <p className="mt-5 leading-relaxed text-muted">{c.body}</p>
+                <p className="mt-5 text-muted">{c.body}</p>
               </div>
               <div className="grid border-t border-line md:grid-cols-2">
                 <div className="px-6 py-5 sm:px-8 lg:px-9">
-                  <p className="text-[0.7rem] font-semibold tracking-[0.14em] text-olive uppercase">What it covers</p>
+                  <p className="text-label font-semibold tracking-[0.14em] text-olive uppercase">What it covers</p>
                   <ul className="mt-3 grid gap-2">
                     {c.scope.map((item) => (
-                      <li key={item} className="flex items-start gap-2.5 text-[0.92rem] leading-snug text-text">
+                      <li key={item} className="flex items-start gap-2.5 text-body-sm text-text">
                         <Check className="mt-0.5 size-4 shrink-0 text-olive" aria-hidden="true" />
                         {item}
                       </li>
@@ -60,11 +60,11 @@ export function PillarSection({ pillar, tone }: { pillar: Pillar; tone: 'paper' 
                   </ul>
                 </div>
                 <div className="border-t border-line bg-olive-soft/50 px-6 py-5 sm:px-8 md:border-t-0 md:border-l lg:px-9">
-                  <p className="inline-flex items-center gap-2 text-[0.7rem] font-semibold tracking-[0.14em] text-olive uppercase">
+                  <p className="inline-flex items-center gap-2 text-label font-semibold tracking-[0.14em] text-olive uppercase">
                     <TrendingUp className="size-4" aria-hidden="true" />
                     In practice
                   </p>
-                  <p className="mt-3 font-semibold leading-snug text-text">{c.evidence}</p>
+                  <p className="mt-3 font-semibold text-text">{c.evidence}</p>
                 </div>
               </div>
             </Reveal>

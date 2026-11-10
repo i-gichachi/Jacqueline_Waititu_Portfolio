@@ -25,6 +25,19 @@ export const site = {
     'I am Jacqueline Waititu, a General Manager and Operations Leader with 18+ years building, scaling and integrating operations, from a five-person start-up to a 103-person business acquired by Social Discovery Group.',
 } as const;
 
+/**
+ * True once site.calendly is a real event link (it has a path, e.g. https://calendly.com/name/consultation).
+ * While it is the bare https://calendly.com placeholder, Connect runs email-only: the booking grid and the
+ * Calendly button stay hidden and email and phone are the booking route. Setting the link is the only change needed.
+ */
+export const hasBookingLink = (() => {
+  try {
+    return new URL(site.calendly).pathname.replace(/\/+$/, '').length > 0;
+  } catch {
+    return false;
+  }
+})();
+
 export const nav = [
   { href: '/leadership', label: 'Leadership' },
   { href: '/capabilities', label: 'Capabilities' },
@@ -61,7 +74,7 @@ export interface Metric {
 }
 
 export const headlineMetrics: Metric[] = [
-  { value: 18, suffix: '+', label: 'Years in operations leadership', detail: 'From the service floor to General Manager' },
+  { value: 18, suffix: '+', label: 'Years in operations', detail: 'From the service floor to General Manager' },
   { value: 103, from: 5, label: 'People in the operation I built', detail: 'Grown from a five-person start-up' },
   { value: 75, suffix: '%', label: 'Lift in processing throughput', detail: 'Within three months, through AI workflow automation' },
   { value: 100, suffix: '%', label: 'Key clients retained', detail: 'Through the acquisition earn-out period' },
@@ -90,26 +103,25 @@ export const sectors = [
   {
     icon: 'landmark',
     title: 'Banking & Financial Services',
-    body: 'Branch advisory on asset and liability products and customer relationships.',
+    body: 'Early career: branch advisory on asset and liability products and customer relationships.',
     orgs: ['Barclays Bank of Kenya'],
   },
   {
     icon: 'radio',
-    title: 'Telecommunications',
-    body: 'Channel support and back-office quality through a national mobile launch.',
+    title: 'Tele­communications', // soft hyphen: breaks only inside the narrow five-column Trust card
+    body: 'Early career: channel support and back-office quality through a national mobile launch.',
     orgs: ['Telkom Kenya (Orange Kenya)'],
   },
 ] as const;
 
+/** Organisations, labelled by relationship (round 4): employers, education and affiliations are never mixed. */
 export const organisations = [
-  'Social Discovery Group',
-  'Ecom Services Ltd',
-  'Barclays Bank of Kenya',
-  'Telkom Kenya (Orange Kenya)',
-  'Ken-Tech Data Ltd',
-  'Monarch Business School, Switzerland',
-  'Egerton University',
-  'The Women on Boards Network Kenya',
+  {
+    label: 'Employers',
+    names: ['Social Discovery Group', 'Ecom Services Ltd', 'Ken-Tech Data Ltd', 'Barclays Bank of Kenya', 'Telkom Kenya (Orange Kenya)'],
+  },
+  { label: 'Education', names: ['Monarch Business School, Switzerland', 'Egerton University'] },
+  { label: 'Affiliations', names: ['The Women on Boards Network Kenya'] },
 ] as const;
 
 /** Home about bridge. */
@@ -118,7 +130,7 @@ export const aboutBridge = {
   heading: 'From the service floor to the General Manager’s office, inside one growing operation.',
   paragraphs: [
     'My career began in 2008 on the front line: a BPO service desk, a telecoms dealer line and a bank branch. In 2010 I joined Ecom Services Ltd as a team leader; by 2012, I was its General Manager.',
-    'Over the next nine years I grew a five-person start-up into a 103-person operation and built its HR, finance, compliance and trust and safety functions. When Social Discovery Group acquired the company in 2021, I led the due diligence, the integration and, later, the closure. That full lifecycle is what I bring to General Manager and Head of Operations roles, and to organisations that need the same structure built for them.',
+    'I grew a five-person start-up into a 103-person operation and built its HR, finance, compliance and trust and safety functions. When Social Discovery Group acquired the company in 2021, I led the due diligence and then the integration. That full lifecycle is what I bring to General Manager and Head of Operations roles, and to organisations that need the same structure built for them.',
   ],
   facts: [
     { label: 'Based in', value: 'Nairobi, Kenya' },

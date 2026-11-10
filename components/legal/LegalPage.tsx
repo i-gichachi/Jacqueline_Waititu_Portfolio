@@ -16,7 +16,7 @@ export function LegalPage({ doc }: { doc: LegalDoc }) {
           </div>
           <div className="flex flex-col gap-4 md:col-span-5 md:pb-1">
             <p className="text-lead text-muted">{doc.intro}</p>
-            <p className="inline-flex items-center gap-2 text-sm text-muted">
+            <p className="inline-flex items-center gap-2 text-small text-muted">
               <CalendarDays className="size-4 text-olive" aria-hidden="true" />
               Last updated <time dateTime="2026-11-05" className="font-semibold text-text">{doc.updated}</time>
             </p>

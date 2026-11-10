@@ -40,8 +40,8 @@ export default function AdvisoryPage() {
                 <div className="card flex h-full gap-4 p-5 sm:p-6">
                   <IconTile name={n.icon} tone={i === 1 ? 'brick' : 'olive'} />
                   <div className="min-w-0">
-                    <h2 className="font-sans text-base font-semibold">{n.title}</h2>
-                    <p className="mt-1 text-[0.92rem] text-muted">{n.body}</p>
+                    <h2 className="font-sans text-body-sm font-semibold">{n.title}</h2>
+                    <p className="mt-1 text-body-sm text-muted">{n.body}</p>
                   </div>
                 </div>
               </Reveal>

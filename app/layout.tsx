@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-GB" data-scroll-behavior="smooth" className={`${display.variable} ${body.variable}`}>
       <body>
-        <a href="#main" className="sr-only z-[70] rounded-full bg-olive px-4 py-2 font-semibold text-on-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3">
+        <a href="#main" className="sr-only z-[70] rounded-full bg-olive px-4 py-2 font-semibold text-on-ink focus:not-sr-only focus:fixed focus:inline-flex focus:min-h-11 focus:items-center focus:top-3 focus:left-3">
           Skip to content
         </a>
         <Header />

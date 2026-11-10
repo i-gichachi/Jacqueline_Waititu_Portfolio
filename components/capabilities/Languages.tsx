@@ -21,7 +21,7 @@ export function Languages() {
                   <IconTile name="languages" tone={i === 0 ? 'olive' : 'brick'} />
                   <h3 className="text-h3">{l.name}</h3>
                 </div>
-                <span className="rounded-full border border-line-strong px-3 py-1 text-xs font-semibold">{l.level}</span>
+                <span className="rounded-full border border-line-strong px-3 py-1 text-small font-semibold">{l.level}</span>
               </div>
               <div
                 role="img"
@@ -29,11 +29,11 @@ export function Languages() {
                 className="mt-8 h-2 overflow-hidden rounded-full bg-stone"
               >
                 <span
-                  className="block h-full origin-left scale-x-0 rounded-full bg-brick transition-transform duration-1400 ease-(--ease-out-expo) in-[.is-in]:scale-x-100"
+                  className="block h-full origin-left rounded-full bg-brick transition-transform duration-1400 ease-(--ease-out-expo) in-[.reveal-wait]:scale-x-0"
                   style={{ width: `${l.score}%`, transitionDelay: `${300 + i * 160}ms` }}
                 />
               </div>
-              <div className="mt-2.5 flex justify-between text-xs text-muted">
+              <div className="mt-2.5 flex justify-between text-small text-muted">
                 <span>Working</span>
                 <span>Professional</span>
                 <span>Native</span>

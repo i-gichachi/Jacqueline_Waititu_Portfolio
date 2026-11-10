@@ -20,7 +20,7 @@ export function StatusPanel({ code, eyebrow, title, body, actions }: { code: str
           </div>
         </div>
         <nav aria-label="Pages on this site" className="card p-5 sm:p-6 lg:col-span-5">
-          <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">Where to next</p>
+          <p className="text-label font-semibold tracking-[0.14em] text-muted uppercase">Where to next</p>
           <ul className="mt-3">
             {nav.map((n) => (
               <li key={n.href} className="border-b border-line last:border-b-0">

@@ -52,7 +52,7 @@ export function IconTile({ name, tone = 'olive' }: { name: string; tone?: 'olive
   const tones = {
     olive: 'bg-olive-soft text-olive',
     brick: 'bg-olive-soft text-brick',
-    ink: 'bg-ink-3 text-olive-light',
+    ink: 'bg-olive-deep text-olive-light',
   } as const;
   return (
     <span className={`inline-flex size-11 shrink-0 items-center justify-center rounded-xl ${tones[tone]}`}>

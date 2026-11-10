@@ -22,7 +22,7 @@ export default function ErrorPage({ error, retry }: { error: unknown; retry: () 
           <button
             type="button"
             onClick={() => retry()}
-            className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-(--radius-btn) bg-olive px-5 py-2.5 text-sm font-semibold text-on-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-olive-600 sm:px-6"
+            className="group inline-flex min-h-11 items-center justify-center gap-2 rounded-(--radius-btn) bg-olive px-5 py-2.5 text-small font-semibold text-on-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-olive-600 sm:px-6"
           >
             <RotateCcw className="size-4 transition-transform duration-500 group-hover:-rotate-90" aria-hidden="true" />
             Try again

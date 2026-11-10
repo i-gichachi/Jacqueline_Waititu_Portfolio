@@ -36,24 +36,24 @@ export function Competencies() {
               <header className="on-ink relative overflow-hidden bg-ink p-6 text-on-ink lg:p-7">
                 <div aria-hidden="true" className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brick transition-transform duration-700 ease-(--ease-out-expo) group-hover:scale-x-100" />
                 <div className="relative">
-                  <h3 className="text-h3 text-[1.45rem] sm:text-[1.6rem]">{p.title}</h3>
-                  <p className="mt-2 text-[0.9rem] text-on-ink-muted">{p.summary}</p>
+                  <h3 className="text-h3 text-h3 ">{p.title}</h3>
+                  <p className="mt-2 text-body-sm text-on-ink-muted">{p.summary}</p>
                 </div>
               </header>
               {p.competencies.map((c) => (
-                <div key={c.title} className="flex gap-4 border-t border-line px-6 py-5 first-of-type:border-t-0 lg:px-7">
-                  <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-brick/25 bg-olive-soft text-olive transition-colors duration-300 group-hover:border-brick/50">
+                <div key={c.title} className="flex gap-4 px-6 py-4 lg:px-7">
+                  <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-olive-soft text-olive">
                     <Icon name={c.icon} className="size-[1.1rem]" />
                   </span>
                   <div className="min-w-0">
-                    <h4 className="font-sans text-[0.95rem] leading-snug font-semibold">{c.title}</h4>
-                    <p className="mt-1.5 text-[0.86rem] leading-relaxed text-muted">{c.short}</p>
+                    <h4 className="font-sans text-body-sm font-semibold">{c.title}</h4>
+                    <p className="mt-1.5 text-small text-muted">{c.short}</p>
                   </div>
                 </div>
               ))}
               <Link
                 href={`/capabilities#${p.id}`}
-                className="mt-auto flex min-h-14 items-center justify-between gap-3 border-t border-line bg-olive-soft/60 px-6 text-sm font-semibold text-olive transition-colors duration-300 hover:bg-olive hover:text-on-ink lg:px-7"
+                className="mt-auto flex min-h-14 items-center justify-between gap-3 bg-olive-soft/60 px-6 text-small font-semibold text-olive transition-colors duration-300 hover:bg-olive hover:text-on-ink lg:px-7"
               >
                 Explore {p.title}
                 <ArrowRight aria-hidden="true" className="size-4 transition-transform duration-300 group-hover:translate-x-1" />

@@ -9,7 +9,7 @@ export interface Crumb {
 export function Breadcrumb({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Breadcrumb">
-      <ol className="flex min-w-0 items-center gap-1.5 text-[0.8rem] font-semibold text-muted">
+      <ol className="flex min-w-0 items-center gap-1.5 text-small font-semibold text-muted">
         {items.map((c, i) => (
           <li key={c.label} className={`flex items-center gap-1.5 ${c.href ? 'shrink-0' : 'min-w-0'}`}>
             {i > 0 && <ChevronRight aria-hidden="true" className="size-3.5 shrink-0 text-line-strong" />}

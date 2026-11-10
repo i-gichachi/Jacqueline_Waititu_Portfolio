@@ -5,13 +5,13 @@ import { ArrowRight, ArrowUpRight, Download } from 'lucide-react';
 type Variant = 'primary' | 'olive' | 'secondary' | 'ghost' | 'light' | 'outline-light';
 
 const base =
-  'group inline-flex min-h-11 items-center justify-center gap-2 rounded-(--radius-btn) py-2.5 text-sm font-semibold tracking-[0.01em] whitespace-nowrap transition-all duration-300 ease-(--ease-out-expo) active:scale-[0.98]';
+  'group inline-flex min-h-11 items-center justify-center gap-2 rounded-(--radius-btn) py-2.5 text-small font-semibold whitespace-nowrap transition-all duration-300 ease-(--ease-out-expo) active:scale-[0.98]';
 
 const variants: Record<Variant, string> = {
   /** Garnet: the main action. */
-  primary: 'px-5 sm:px-6 bg-olive text-on-ink shadow-[0_8px_20px_-10px_rgb(85_107_47/0.6)] hover:bg-olive-600 hover:-translate-y-0.5',
+  primary: 'px-5 sm:px-6 bg-olive text-on-ink hover:bg-olive-600 hover:-translate-y-0.5',
   /** Olive fill: strong section-level actions on light backgrounds. */
-  olive: 'px-5 sm:px-6 bg-olive text-on-ink shadow-[0_8px_20px_-10px_rgb(85_107_47/0.7)] hover:bg-olive-600 hover:-translate-y-0.5',
+  olive: 'px-5 sm:px-6 bg-olive text-on-ink hover:bg-olive-600 hover:-translate-y-0.5',
   /** Outlined on light backgrounds. */
   secondary: 'px-5 sm:px-6 border border-line-strong bg-transparent text-text hover:border-text hover:bg-text hover:text-paper',
   /** Text with arrow. */

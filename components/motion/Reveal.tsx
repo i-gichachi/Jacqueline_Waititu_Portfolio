@@ -11,29 +11,35 @@ interface Props {
   id?: string;
 }
 
-/** Fades and lifts its children in once they enter the viewport. Reduced motion shows them at once (globals.css). */
+/**
+ * Lifts a block in as it is scrolled to. The server renders it fully visible, so first paint, no-JS
+ * readers, crawlers and screenshots always see the content. After hydration, only a block that is still
+ * below the fold is held back (.reveal-wait) until it comes into view. Reduced motion: never held back.
+ */
 export function Reveal({ children, as: Tag = 'div', className = '', delay = 0, id }: Props) {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
-    if (typeof IntersectionObserver === 'undefined') {
-      el.classList.add('is-in');
-      return;
-    }
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (el.getBoundingClientRect().top < window.innerHeight) return;
+    el.classList.add('reveal-wait');
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (e.isIntersecting) {
-            e.target.classList.add('is-in');
+            e.target.classList.remove('reveal-wait');
             io.unobserve(e.target);
           }
         }
       },
-      { rootMargin: '0px 0px -8% 0px', threshold: 0.08 },
+      { rootMargin: '0px 0px -6% 0px', threshold: 0.05 },
     );
     io.observe(el);
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      el.classList.remove('reveal-wait');
+    };
   }, []);
   return (
     <Tag ref={ref} id={id} className={`reveal ${className}`} style={{ '--reveal-delay': `${delay}ms` } as CSSProperties}>

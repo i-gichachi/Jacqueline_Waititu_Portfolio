@@ -43,30 +43,59 @@
   --font-display: var(--font-display-next), Georgia, 'Times New Roman', serif;
   --font-sans: var(--font-body-next), system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
 
+  /*
+    Type ramp (round 4): nine sizes, each fluid between 390px and 1280px.
+      display 44 to 94   name in the hero and the footer (the one oversize moment)
+      h1      36 to 56   page titles, closing bands, headline figures
+      h2      28 to 40   section titles, the hero role line
+      h3      22 to 26   card titles, case titles, quotes
+      h4      18 to 20   small card titles, fact values
+      body    16 to 18   running text (set on body)
+      body-sm 16         text inside cards
+      small   14         meta, buttons, captions
+      label   12         uppercase labels only
+    No other size is allowed in components.
+  */
   --text-display: clamp(2.6rem, 1.4rem + 5.6vw, 6rem);
   --text-display--line-height: 0.98;
   --text-display--letter-spacing: -0.025em;
-  --text-h1: clamp(2rem, 1.3rem + 2.6vw, 3.4rem);
+  --text-h1: clamp(2.25rem, 1.7rem + 2.25vw, 3.5rem);
   --text-h1--line-height: 1.05;
   --text-h1--letter-spacing: -0.02em;
-  --text-h2: clamp(1.65rem, 1.2rem + 1.7vw, 2.6rem);
+  --text-figure: clamp(2.25rem, 1.7rem + 2.25vw, 3.5rem);
+  --text-figure--line-height: 1;
+  --text-figure--letter-spacing: -0.02em;
+  --text-h2: clamp(1.75rem, 1.42rem + 1.35vw, 2.5rem);
   --text-h2--line-height: 1.1;
   --text-h2--letter-spacing: -0.015em;
-  --text-h3: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem);
+  --text-h3: clamp(1.375rem, 1.266rem + 0.45vw, 1.625rem);
   --text-h3--line-height: 1.25;
-  --text-lead: clamp(1rem, 0.94rem + 0.3vw, 1.18rem);
+  --text-h4: clamp(1.125rem, 1.07rem + 0.225vw, 1.25rem);
+  --text-h4--line-height: 1.3;
+  --text-body: var(--fs-body);
+  --text-body--line-height: 1.6;
+  --text-lead: var(--fs-body);
   --text-lead--line-height: 1.6;
-  --text-metric: clamp(2.4rem, 1.6rem + 3vw, 4rem);
-  --text-metric--line-height: 1;
+  --text-body-sm: 1rem;
+  --text-body-sm--line-height: 1.6;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.4;
+
+  /* Measure: about 66 characters at any body size (the Switzer average is about half an em). */
+  --max-width-measure: 33em;
 
   --radius-card: 0.875rem;
   --radius-btn: 999px;
 
-  --shadow-card: 0 1px 2px rgb(21 24 15 / 0.04), 0 8px 24px -12px rgb(21 24 15 / 0.12);
-  --shadow-lift: 0 2px 4px rgb(21 24 15 / 0.06), 0 22px 44px -18px rgb(21 24 15 / 0.28);
+  /* Quiet chrome (round 4): no shadows anywhere; whitespace and surface tone do the grouping. */
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+:root { --fs-body: 1rem; }
+@media (min-width: 1024px) { :root { --fs-body: 1.125rem; } }
 
 @layer base {
   html {
@@ -78,7 +107,7 @@
     background: var(--color-paper);
     color: var(--color-text);
     font-family: var(--font-sans);
-    font-size: 0.9375rem;
+    font-size: var(--fs-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -86,15 +115,12 @@
     -webkit-tap-highlight-color: transparent;
     overflow-x: clip;
   }
-  @media (min-width: 768px) {
-    body { font-size: 1rem; }
-  }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 400;
     text-wrap: balance;
   }
-  p { text-wrap: pretty; }
+  p { text-wrap: pretty; max-width: var(--max-width-measure); }
   ::selection { background: var(--color-olive); color: var(--color-on-ink); }
   :focus-visible {
     outline: 2px solid var(--color-olive);
@@ -125,9 +151,10 @@
     align-items: center;
     gap: 0.6rem;
     font-family: var(--font-sans);
-    font-size: 0.72rem;
+    font-size: var(--text-label);
+    line-height: 1.4;
     font-weight: 600;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--color-olive);
   }
@@ -140,17 +167,15 @@
   .on-ink .eyebrow { color: var(--color-olive-light); }
   .on-ink .eyebrow::before { background: var(--color-brick-light); }
 
+  /* Cards are a surface tone, not a box: no border, no shadow, the 14px radius stays. */
   .card {
     background: var(--color-surface);
-    border: 1px solid var(--color-line);
     border-radius: var(--radius-card);
-    box-shadow: var(--shadow-card);
-    transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo), border-color 0.3s ease;
+    transition: transform 0.5s var(--ease-out-expo), background-color 0.3s ease;
   }
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lift);
-    border-color: var(--color-line-strong);
+  .bg-surface .card, .card .card { background: var(--color-paper); }
+  @media (hover: hover) {
+    .card-hover:hover { transform: translateY(-3px); }
   }
 
   .link-underline {
@@ -178,19 +203,17 @@
   .prose-x a { color: var(--color-olive); text-decoration: underline; text-underline-offset: 3px; }
 }
 
-/* Reveal on scroll (components/motion/Reveal.tsx adds .is-in). */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-.reveal.is-in { opacity: 1; transform: none; }
-.no-js .reveal { opacity: 1; transform: none; }
+/*
+  Reveal on scroll (components/motion/Reveal.tsx). Content is visible by default: on first paint, without
+  JavaScript and in any capture. It never fades: blocks still below the fold when the page hydrates are marked
+  .reveal-wait and slide up 16px as they are scrolled to. Headings, the hero and the metrics never use it.
+*/
+.reveal { transition: transform 0.7s var(--ease-out-expo); transition-delay: var(--reveal-delay, 0ms); }
+.reveal.reveal-wait { transform: translateY(16px); transition: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal, .reveal.reveal-wait { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;

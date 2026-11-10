@@ -18,9 +18,9 @@ export function BackToTop() {
       aria-label="Back to top"
       title="Back to top"
       onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })}
-      className={`fixed right-4 bottom-4 z-40 inline-flex size-11 items-center justify-center rounded-full bg-olive text-on-ink shadow-[0_12px_28px_-10px_rgb(163_23_47/0.8)] transition-all duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:bg-olive-600 sm:right-6 sm:bottom-6 ${
-        show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
-      }`}
+      className={`fixed right-4 bottom-4 z-40 inline-flex size-11 items-center justify-center rounded-full bg-olive text-on-ink transition-all duration-500 ease-(--ease-out-expo) hover:-translate-y-1 hover:bg-olive-600 sm:right-6 sm:bottom-6 ${
+ show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
+ }`}
     >
       <ArrowUp className="size-5" aria-hidden="true" strokeWidth={2} />
     </button>

@@ -11,6 +11,8 @@ export interface Service {
   duration: string;
   /** Case study slugs that show this service in practice. */
   cases: string[];
+  /** Evidence held somewhere other than a case study (shown instead of the case links when there are none). */
+  evidence?: { label: string; href: string };
 }
 
 export const services: Service[] = [
@@ -46,7 +48,9 @@ export const services: Service[] = [
     bestFor: 'High-volume operations with manual processing, approvals or moderation queues.',
     investment: 'Scoped to your project',
     duration: 'Set by scope',
-    cases: ['hr-function', 'kenya-office-integration'],
+    /* B8 (round 4): no case study covers the AI work yet; the evidence is the AI card on Capabilities. */
+    cases: [],
+    evidence: { label: 'AI-Enabled Operations Transformation', href: '/capabilities#ai-enabled-operations-transformation' },
   },
   {
     slug: 'due-diligence-integration',

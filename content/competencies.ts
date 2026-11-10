@@ -76,7 +76,7 @@ export const pillars: Pillar[] = [
       {
         title: 'Crisis Management & Business Continuity',
         icon: 'life-buoy',
-        short: 'Protecting people and service through disruption, closure and change.',
+        short: 'Protecting people and service through disruption and change.',
         body: 'Continuity planning starts before the disruption arrives. In early 2020, ahead of the national lockdowns, I introduced sanitisation protocols and mandatory masking, then moved the whole company to remote operations within three weeks, backed by laptops, screens, UPSs, asset-tracking controls and employee training. Service continued without interruption across two years of remote work, with no employee infections.',
         scope: ['Business continuity planning', 'Remote operations at scale', 'Health and safety protocols'],
         evidence: 'Moved all 80 employees to remote work by 23 March 2020 with service uninterrupted.',

@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react';
-import { Reveal } from '../motion/Reveal.tsx';
 
 interface Props {
   eyebrow?: string;
@@ -14,17 +13,18 @@ interface Props {
 
 /**
  * Section heading: eyebrow and serif title, with an optional action aligned to the right on desktop.
- * No intro or sub-paragraph under section titles, by design.
+ * No intro or sub-paragraph under section titles, by design. Never wrapped in a reveal: headings are
+ * critical copy and show on first paint.
  */
 export function SectionHeading({ eyebrow, title, as = 'h2', action, className = '' }: Props) {
   const H = as;
   return (
-    <Reveal className={`flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-10 ${className}`}>
+    <div className={`flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-10 ${className}`}>
       <div className="max-w-4xl">
         {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
         <H className={as === 'h1' ? 'text-h1' : 'text-h2'}>{title}</H>
       </div>
       {action && <div className="shrink-0 md:pb-1">{action}</div>}
-    </Reveal>
+    </div>
   );
 }

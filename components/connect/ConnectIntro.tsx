@@ -1,10 +1,6 @@
-import type { ReactNode } from 'react';
-import { CheckCircle2, Clock, Mail, MapPin, Phone } from 'lucide-react';
-import { cta, site } from '../../content/site.ts';
+import { CheckCircle2 } from 'lucide-react';
+import { cta, hasBookingLink, site } from '../../content/site.ts';
 import { Button } from '../ui/Button.tsx';
-import { LinkedInMark } from '../ui/LinkedInMark.tsx';
-import { Reveal } from '../motion/Reveal.tsx';
-import { SectionHeading } from '../ui/SectionHeading.tsx';
 
 const topics = [
   'General Manager and Head of Operations roles',
@@ -15,86 +11,66 @@ const topics = [
   'HR, budget and governance reviews',
 ] as const;
 
-interface Row {
-  icon: ReactNode;
-  label: string;
-  value: string;
-  href?: string;
-  external?: boolean;
-}
+const label = 'text-label font-semibold tracking-[0.14em] text-muted uppercase';
+const value = 'font-semibold text-h4 text-text [overflow-wrap:anywhere] link-underline hover:text-olive';
 
-const ico = 'size-[1.1rem]';
-const rows: Row[] = [
-  { icon: <Mail className={ico} aria-hidden="true" />, label: 'Email', value: site.email, href: `mailto:${site.email}` },
-  { icon: <Phone className={ico} aria-hidden="true" />, label: 'Phone', value: site.phone, href: site.phoneHref },
-  { icon: <LinkedInMark className="size-4" />, label: 'LinkedIn', value: site.linkedinLabel, href: site.linkedin, external: true },
-  { icon: <MapPin className={ico} aria-hidden="true" />, label: 'Location', value: site.location },
-  { icon: <Clock className={ico} aria-hidden="true" />, label: 'Response time', value: site.responseTime },
-];
-
-/** First section of /connect: H1, inclusive intro, what a conversation can cover, contact details and the CV. */
+/**
+ * First section of /connect: one statement H1, then the contact routes as three plain text columns
+ * (email and phone, LinkedIn, CV), then what a conversation can cover. While the Calendly link is the
+ * placeholder, email and phone are the booking route and there is no booking button.
+ */
 export function ConnectIntro() {
   return (
     <section className="bg-paper pt-24 pb-14 sm:pb-16 lg:pt-28 lg:pb-20" aria-labelledby="connect-title">
       <div className="container-x">
-        <SectionHeading
-          as="h1"
-          eyebrow="Connect"
-          title={<span id="connect-title">Book a consultation</span>}
-        />
+        <p className="eyebrow mb-4">Connect</p>
+        <h1 id="connect-title" className="max-w-5xl text-h1">
+          Book a consultation with me about a General Manager or Head of Operations role, or about the structure your organisation needs.
+        </h1>
 
-        <div className="mt-10 grid gap-8 lg:mt-12 lg:grid-cols-12 lg:gap-12">
-          <Reveal delay={80} className="flex flex-col lg:col-span-7">
-            <h2 className="font-sans text-[0.95rem] font-semibold">What a conversation can cover</h2>
-            <ul className="mt-4 grid gap-x-8 border-t border-line sm:grid-cols-2">
+        <ul className="mt-10 grid gap-8 border-t border-line-strong pt-8 md:grid-cols-3 md:gap-10 lg:mt-14" aria-label="Contact details">
+          <li className="flex flex-col gap-2">
+            <p className={label}>{hasBookingLink ? 'Email and phone' : 'Book by email or phone'}</p>
+            <a href={`mailto:${site.email}?subject=${encodeURIComponent('Consultation request')}`} className={`${value} inline-flex min-h-11 items-center self-start`}>
+              {site.email}
+            </a>
+            <a href={site.phoneHref} className={`${value} inline-flex min-h-11 items-center self-start`}>
+              {site.phone}
+            </a>
+            <p className="mt-1 text-small text-muted">{site.responseTime}</p>
+          </li>
+          <li className="flex flex-col gap-2">
+            <p className={label}>LinkedIn</p>
+            <a href={site.linkedin} target="_blank" rel="noopener noreferrer" className={`${value} inline-flex min-h-11 items-center self-start`}>
+              {site.linkedinLabel}
+            </a>
+            <p className="mt-1 text-small text-muted">{site.location}</p>
+          </li>
+          <li className="flex flex-col gap-2">
+            <p className={label}>CV</p>
+            <a href={site.cv} download className={`${value} inline-flex min-h-11 items-center self-start`}>
+              {cta.cv.label}
+            </a>
+          </li>
+        </ul>
+
+        <div className="mt-14 grid gap-6 lg:mt-16 lg:grid-cols-12 lg:gap-12">
+          <h2 className="text-h3 lg:col-span-4">What a conversation can cover</h2>
+          <div className="lg:col-span-8">
+            <ul className="grid gap-x-8 sm:grid-cols-2">
               {topics.map((t) => (
-                <li key={t} className="flex items-start gap-3 border-b border-line py-3.5 text-[0.95rem]">
-                  <CheckCircle2 aria-hidden="true" className="mt-0.5 size-[1.1rem] shrink-0 text-olive" strokeWidth={1.75} />
+                <li key={t} className="flex items-start gap-3 py-2.5">
+                  <CheckCircle2 aria-hidden="true" className="mt-1 size-[1.1rem] shrink-0 text-olive" strokeWidth={1.75} />
                   <span>{t}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:mt-auto lg:pt-8">
-              <Button href="#booking">{cta.consult.label}</Button>
-              <Button href={site.cv} variant="secondary" icon="download" download>
-                {cta.cv.label}
-              </Button>
-            </div>
-          </Reveal>
-
-          <Reveal delay={180} className="lg:col-span-5">
-            <ul className="card divide-y divide-line overflow-hidden" aria-label="Contact details">
-              {rows.map((r) => {
-                const inner = (
-                  <>
-                    <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-olive-soft text-olive transition-colors duration-300 group-hover:bg-brick group-hover:text-on-ink">
-                      {r.icon}
-                    </span>
-                    <span className="min-w-0">
-                      <span className="block text-[0.7rem] font-semibold tracking-[0.14em] text-muted uppercase">{r.label}</span>
-                      <span className="block font-semibold [overflow-wrap:anywhere] text-text">{r.value}</span>
-                    </span>
-                  </>
-                );
-                const cls = 'flex min-h-[4.5rem] items-center gap-4 px-5 py-3.5 sm:px-6';
-                return (
-                  <li key={r.label}>
-                    {r.href ? (
-                      <a
-                        href={r.href}
-                        className={`group ${cls} transition-colors duration-300 hover:bg-paper`}
-                        {...(r.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                      >
-                        {inner}
-                      </a>
-                    ) : (
-                      <div className={cls}>{inner}</div>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-          </Reveal>
+            {hasBookingLink && (
+              <div className="mt-8">
+                <Button href="#booking">{cta.consult.label}</Button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

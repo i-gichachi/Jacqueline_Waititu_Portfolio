@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-const label = 'text-[0.7rem] font-semibold tracking-[0.14em] text-muted uppercase';
+const label = 'text-label font-semibold tracking-[0.14em] text-muted uppercase';
 
 export default async function CaseStudyPage({ params }: Params) {
   const { slug } = await params;
@@ -69,7 +69,7 @@ export default async function CaseStudyPage({ params }: Params) {
             <Reveal className="min-w-0 lg:col-span-8">
               <p className="eyebrow">{c.organisation}</p>
               <h1 className="mt-4 text-h1">{c.title}</h1>
-              <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-[0.85rem] font-semibold text-muted" aria-label="Role, period and location">
+              <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-small font-semibold text-muted" aria-label="Role, period and location">
                 <li className="inline-flex items-center gap-1.5">
                   <Briefcase aria-hidden="true" className="size-4 text-olive" strokeWidth={1.75} />
                   {c.role}
@@ -94,7 +94,7 @@ export default async function CaseStudyPage({ params }: Params) {
                   {glance.map((g) => (
                     <div key={g.term} className="grid grid-cols-[7rem_1fr] gap-3 py-3">
                       <dt className={`${label} pt-0.5`}>{g.term}</dt>
-                      <dd className="text-[0.92rem] font-semibold">{g.value}</dd>
+                      <dd className="text-body-sm font-semibold">{g.value}</dd>
                     </div>
                   ))}
                   <div className="grid gap-3 pt-4 pb-1">
@@ -102,7 +102,7 @@ export default async function CaseStudyPage({ params }: Params) {
                     <dd>
                       <ul className="flex flex-wrap gap-1.5">
                         {c.scope.map((s) => (
-                          <li key={s} className="rounded-full bg-olive-soft px-2.5 py-1 text-[0.75rem] font-semibold text-olive">
+                          <li key={s} className="rounded-full bg-olive-soft px-2.5 py-1 text-small font-semibold text-olive">
                             {s}
                           </li>
                         ))}
@@ -129,8 +129,8 @@ export default async function CaseStudyPage({ params }: Params) {
                 delay={i * 110}
                 className="grid grid-cols-[9.5rem_1fr] items-center gap-3 py-4 sm:flex sm:flex-col-reverse sm:items-start sm:justify-end sm:gap-3 sm:border-t sm:border-line-ink sm:py-0 sm:pt-6"
               >
-                <dt className="order-2 text-[0.85rem] leading-snug text-on-ink-muted sm:order-none sm:text-sm">{m.label}</dt>
-                <dd className="order-1 font-display text-[1.85rem] leading-none whitespace-nowrap sm:order-none sm:text-metric">
+                <dt className="order-2 text-small text-on-ink-muted sm:order-none ">{m.label}</dt>
+                <dd className="order-1 font-display text-h3 leading-none whitespace-nowrap sm:order-none sm:text-figure">
                   <CountUp metric={m} />
                 </dd>
               </Reveal>
@@ -204,9 +204,9 @@ export default async function CaseStudyPage({ params }: Params) {
             <h2 className="eyebrow">Key takeaway</h2>
             <span
               aria-hidden="true"
-              className="mt-6 block h-0.5 w-16 origin-left scale-x-0 bg-brick transition-transform delay-300 duration-1000 ease-(--ease-out-expo) group-[.is-in]/draw:scale-x-100"
+              className="mt-6 block h-0.5 w-16 origin-left bg-brick transition-transform delay-300 duration-1000 ease-(--ease-out-expo) group-[.reveal-wait]/draw:scale-x-0"
             />
-            <p className="mt-6 font-display text-[1.55rem] leading-[1.22] tracking-[-0.01em] sm:text-[2rem] lg:text-[2.3rem]">{c.takeaway}</p>
+            <p className="mt-6 font-display text-h3">{c.takeaway}</p>
           </Reveal>
           <Reveal delay={140} className="flex flex-col lg:col-span-5 lg:justify-end lg:border-l lg:border-line lg:pl-12">
             <h2 className="eyebrow">Conclusion</h2>
@@ -228,7 +228,7 @@ export default async function CaseStudyPage({ params }: Params) {
                 </div>
                 <ul className="flex flex-wrap gap-2">
                   {c.tools.map((t) => (
-                    <li key={t} className="inline-flex min-h-10 items-center rounded-full border border-line bg-paper px-4 text-sm font-semibold">
+                    <li key={t} className="inline-flex min-h-10 items-center rounded-full border border-line bg-paper px-4 text-small font-semibold">
                       {t}
                     </li>
                   ))}
@@ -246,7 +246,7 @@ export default async function CaseStudyPage({ params }: Params) {
                     <li key={t} className="max-w-full">
                       <Link
                         href="/capabilities"
-                        className="group inline-flex min-h-11 max-w-full items-center gap-2 rounded-xl border border-line bg-paper px-4 py-2 text-sm font-semibold transition-colors duration-300 hover:border-olive hover:text-olive"
+                        className="group inline-flex min-h-11 max-w-full items-center gap-2 rounded-xl border border-line bg-paper px-4 py-2 text-small font-semibold transition-colors duration-300 hover:border-olive hover:text-olive"
                       >
                         <span>{t}</span>
                         <ArrowUpRight

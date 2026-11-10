@@ -150,7 +150,7 @@ export const cases: CaseStudy[] = [
     approach: [
       {
         title: 'Protect people early',
-        body: 'Between January and March 2020, before the national lockdowns, I put sanitisation protocols and mandatory masking in place. Acting early gave the company time to protect people while it prepared properly for remote work, rather than reacting once restrictions arrived. No employee infections were recorded, which I credit to these early health and safety measures.',
+        body: 'Between January and March 2020, before the national lockdowns, I put sanitisation protocols and mandatory masking in place. Acting early gave the company time to protect people while it prepared properly for remote work, rather than reacting once restrictions arrived. No employee infections were recorded.',
       },
       {
         title: 'Equip the whole company',
@@ -168,7 +168,7 @@ export const cases: CaseStudy[] = [
       '85 laptops, 100 additional screens and 85 UPS units set up, with all system access configured',
     ],
     qualitative: [
-      'Zero employee infections, credited to early health and safety measures',
+      'Zero employee infections recorded',
       'Stronger asset management and IT readiness for remote work',
       'No service downtime from power interruptions as the team worked remotely',
       'A safe, compliant return to office aligned with government guidelines',
@@ -196,7 +196,7 @@ export const cases: CaseStudy[] = [
       { value: 25, label: 'Seats added in the expansion' },
     ],
     context:
-      'By 2016 the serviced office model could no longer support the company’s expanding workforce and operational needs. The organisation needed its own dedicated office, with customised infrastructure, systems and workstations, and it needed the move to happen without disrupting a live operation. Seven years later the team had grown again. The existing office lacked enough workspace and meeting rooms for collaboration, operational teams and client-facing work. In both cases physical infrastructure had fallen behind headcount, and as General Manager it was my responsibility to close that gap before it began to limit the business.',
+      'By 2016 the serviced office model could no longer support the company’s expanding workforce and operational needs. The organisation needed its own dedicated office, with customised infrastructure, systems and workstations, and it needed the move to happen without disrupting a live operation. Seven years later the team had grown again. The existing office lacked enough workspace and meeting rooms for collaboration, operational teams and client-facing work. In both cases the workspace was reaching its limits, and as General Manager it was my responsibility to add capacity before space began to limit the business.',
     challenge:
       'Both projects ran to tight timeframes and set budgets, and both had to be delivered around an operation that could not stop. The 2016 project meant establishing a fully customised office end to end, including electrical installations and complete ICT infrastructure, then moving the whole team out of the serviced office without interruption. The 2023 project meant acquiring and renovating a second wing and integrating its networking with the existing server room. Every contract had to be competitive on price and accountable on quality, and no vendor could be appointed on familiarity alone, without being tested against the market.',
     approach: [

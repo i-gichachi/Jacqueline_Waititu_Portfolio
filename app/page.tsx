@@ -22,14 +22,15 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      {/* Round 4, Option B (Ian, 10 November 2026): services move up to third, a written deviation from the standard order. */}
       <Hero />
       <Metrics />
+      <Services />
+      <CaseStudies />
       <Trust />
       <AboutBridge />
       <Competencies />
-      <CaseStudies />
       <TestimonialsSection />
-      <Services />
       <ClosingCta />
     </>
   );

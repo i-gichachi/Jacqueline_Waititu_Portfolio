@@ -30,7 +30,7 @@ export function LegalToc({ items }: { items: Item[] }) {
   }, [items]);
 
   const list = (
-    <ul className="grid gap-0.5 text-sm">
+    <ul className="grid gap-0.5 text-small">
       {items.map((i) => {
         const on = i.id === active;
         return (
@@ -51,7 +51,7 @@ export function LegalToc({ items }: { items: Item[] }) {
   return (
     <>
       <details className="group card px-4 lg:hidden">
-        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-sm font-semibold [&::-webkit-details-marker]:hidden">
+        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 text-small font-semibold [&::-webkit-details-marker]:hidden">
           On this page
           <ChevronDown className="size-4 transition-transform duration-300 group-open:rotate-180" aria-hidden="true" />
         </summary>
@@ -60,7 +60,7 @@ export function LegalToc({ items }: { items: Item[] }) {
         </nav>
       </details>
       <nav aria-label="Contents" className="sticky top-28 hidden lg:block">
-        <p className="mb-4 text-xs font-semibold tracking-[0.16em] text-muted uppercase">On this page</p>
+        <p className="mb-4 text-label font-semibold tracking-[0.14em] text-muted uppercase">On this page</p>
         {list}
       </nav>
     </>

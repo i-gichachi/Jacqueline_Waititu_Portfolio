@@ -33,11 +33,11 @@ export default function CapabilitiesPage() {
                 <a
                   key={p.id}
                   href={`#${p.id}`}
-                  className="group flex min-h-14 items-center justify-between gap-4 rounded-xl border border-line-strong bg-surface px-5 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-brick hover:shadow-(--shadow-card)"
+                  className="group flex min-h-14 items-center justify-between gap-4 rounded-xl border border-line-strong bg-surface px-5 py-3 transition-all duration-300 hover:-translate-y-0.5 hover:border-brick"
                 >
                   <span>
-                    <span className="block font-display text-lg leading-tight">{p.title}</span>
-                    <span className="mt-1 block text-sm text-muted">{p.summary}</span>
+                    <span className="block font-display text-h4 ">{p.title}</span>
+                    <span className="mt-1 block text-small text-muted">{p.summary}</span>
                   </span>
                   <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-olive-soft text-olive transition-transform duration-300 group-hover:translate-y-0.5">
                     <ArrowDown className="size-4" aria-hidden="true" />

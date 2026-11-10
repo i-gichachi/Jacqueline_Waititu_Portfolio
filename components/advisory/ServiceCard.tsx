@@ -8,7 +8,7 @@ import { IconTile } from '../ui/Icon.tsx';
 import { Button } from '../ui/Button.tsx';
 import { CheckList } from '../case/CheckList.tsx';
 
-const label = 'text-[0.7rem] font-semibold tracking-[0.14em] text-muted uppercase';
+const label = 'text-label font-semibold tracking-[0.14em] text-muted uppercase';
 
 /**
  * Rich service card. On large screens each card is a subgrid spanning seven rows of the parent,
@@ -32,12 +32,12 @@ export function ServiceCard({ s, delay = 0 }: { s: Service; delay?: number }) {
 
       <div>
         <p className={label}>Benefits</p>
-        <CheckList items={s.benefits} className="mt-3 gap-2.5 text-[0.94rem] sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-1" />
+        <CheckList items={s.benefits} className="mt-3 gap-2.5 text-body-sm sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-1" />
       </div>
 
       <div className="rounded-r-xl border-l-2 border-brick bg-paper px-4 py-3">
         <p className={label}>Best for</p>
-        <p className="mt-1 text-[0.94rem]">{s.bestFor}</p>
+        <p className="mt-1 text-body-sm">{s.bestFor}</p>
       </div>
 
       <dl className="grid grid-cols-2 divide-x divide-line rounded-xl border border-line">
@@ -46,25 +46,25 @@ export function ServiceCard({ s, delay = 0 }: { s: Service; delay?: number }) {
             <Wallet aria-hidden="true" className="size-3.5 text-olive" strokeWidth={1.75} />
             Investment
           </dt>
-          <dd className="text-[0.92rem] font-semibold">{s.investment}</dd>
+          <dd className="text-body-sm font-semibold">{s.investment}</dd>
         </div>
         <div className="flex flex-col gap-1 p-4">
           <dt className={`${label} inline-flex items-center gap-1.5`}>
             <Clock aria-hidden="true" className="size-3.5 text-olive" strokeWidth={1.75} />
             Duration
           </dt>
-          <dd className="text-[0.92rem] font-semibold">{s.duration}</dd>
+          <dd className="text-body-sm font-semibold">{s.duration}</dd>
         </div>
       </dl>
 
       <div>
-        <p className={label}>Related case studies</p>
+        <p className={label}>{related.length ? 'Related case studies' : 'Related capability'}</p>
         <ul className="mt-1.5 grid">
-          {related.map((c) => (
-            <li key={c.slug}>
+          {(related.length ? related.map((c) => ({ key: c.slug, href: `/track-record/${c.slug}`, title: c.title })) : s.evidence ? [{ key: s.evidence.href, href: s.evidence.href, title: s.evidence.label }] : []).map((c) => (
+            <li key={c.key}>
               <Link
-                href={`/track-record/${c.slug}`}
-                className="group inline-flex min-h-11 items-start gap-2 py-2.5 text-[0.94rem] font-semibold text-olive transition-colors duration-300 hover:text-brick"
+                href={c.href}
+                className="group inline-flex min-h-11 items-start gap-2 py-2.5 text-body-sm font-semibold text-olive transition-colors duration-300 hover:text-brick"
               >
                 <ArrowRight aria-hidden="true" className="mt-[0.2em] size-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
                 <span className="link-underline">{c.title}</span>

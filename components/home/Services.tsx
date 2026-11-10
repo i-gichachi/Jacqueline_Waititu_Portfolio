@@ -32,17 +32,17 @@ export function Services() {
               <div aria-hidden="true" className="absolute inset-x-6 top-0 h-px origin-left scale-x-0 bg-brick transition-transform duration-700 ease-(--ease-out-expo) group-hover:scale-x-100 lg:inset-x-7" />
               <div className="flex items-center gap-4 lg:flex-col lg:items-start">
                 <IconTile name={s.icon} />
-                <h3 className="font-display text-[1.2rem] leading-snug lg:text-[1.35rem]">{s.title}</h3>
+                <h3 className="font-display text-h4 ">{s.title}</h3>
               </div>
-              <p className="text-[0.92rem] text-muted">{s.description}</p>
-              <div className="rounded-xl border border-line bg-stone/70 p-4">
-                <p className="text-[0.7rem] font-semibold tracking-[0.14em] text-olive uppercase">Best for</p>
-                <p className="mt-1.5 text-[0.86rem] leading-snug text-text">{s.bestFor}</p>
+              <p className="text-body-sm text-muted">{s.description}</p>
+              <div className="rounded-xl bg-stone/70 p-4">
+                <p className="text-label font-semibold tracking-[0.14em] text-olive uppercase">Best for</p>
+                <p className="mt-1.5 text-small text-text">{s.bestFor}</p>
               </div>
               <Link
                 href={`/advisory#${s.slug}`}
                 aria-label={`Read more about ${s.title}`}
-                className="inline-flex min-h-11 items-center gap-2 border-t border-line pt-3 text-sm font-semibold text-olive hover:text-olive-600"
+                className="inline-flex min-h-11 items-center gap-2 self-start text-small font-semibold text-olive hover:text-olive-600"
               >
                 <span className="link-underline">Read more</span>
                 <ArrowRight aria-hidden="true" className="size-4 transition-transform duration-300 group-hover:translate-x-1" />

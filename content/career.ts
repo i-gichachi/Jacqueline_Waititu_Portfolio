@@ -26,7 +26,6 @@ export const career: Role[] = [
       'Improved fraud response by 30% to 40% by expanding platform-safety workflows into fraud detection, suspicious-activity monitoring and risk escalation under clearer controls and reporting rhythms.',
       'Held payroll, procurement, vendor and audit controls across a USD 1.1M annual budget, clearing National Social Security Fund (NSSF) and National Hospital Insurance Fund (NHIF) audits without compliance gaps.',
       'Directed workflow transitions, technology adoption, policy harmonisation and reporting realignment during the systems migration, with stakeholder communication keeping client continuity intact.',
-      'Managed office closure, workforce redundancy, legal counsel, settlements, vendor exits, lease termination, KES 8M asset disposal, premises restoration and final accounts.',
     ],
   },
   {
@@ -154,7 +153,7 @@ export const leadershipPrinciples = [
   {
     icon: 'users',
     title: 'People through change',
-    body: 'Every sale, migration and closure I have led was run with the team informed and the service intact.',
+    body: 'Every sale, migration and integration I have led was run with the team informed and the service intact.',
   },
   {
     icon: 'file-check',
@@ -184,8 +183,8 @@ export const certifications = [
   { title: 'Developing Great Team Leaders', issuer: 'Flexi Personnel Ltd.', area: 'Leadership' },
   { title: 'Trainers of Trainers', issuer: 'Flexi Personnel Ltd.', area: 'Training' },
   { title: 'Training in Customer Service', issuer: 'Leaders in Action Group', area: 'Service' },
-  { title: 'Business Process Re-design and Re-engineering', issuer: 'Professional training', area: 'Process' },
-  { title: 'Leadership Development Training', issuer: 'Professional training', area: 'Leadership' },
+  { title: 'Business Process Re-design and Re-engineering', issuer: '', area: 'Process' },
+  { title: 'Leadership Development Training', issuer: '', area: 'Leadership' },
 ] as const;
 
 export interface Testimonial {

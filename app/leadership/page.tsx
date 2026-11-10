@@ -35,7 +35,7 @@ export default function LeadershipPage() {
             <CareerArc />
           </div>
           <div className="mt-8 lg:mt-10">
-            <h2 className="flex items-center gap-4 font-sans text-xs font-semibold tracking-[0.16em] text-muted uppercase after:h-px after:flex-1 after:bg-line">
+            <h2 className="flex items-center gap-4 font-sans text-label font-semibold tracking-[0.14em] text-muted uppercase after:h-px after:flex-1 after:bg-line">
               How I lead
             </h2>
             <ul className="mt-5 grid gap-4 md:grid-cols-3 lg:gap-6">
@@ -55,10 +55,9 @@ export default function LeadershipPage() {
 
       <Credentials />
 
-      <section id="testimonial" aria-labelledby="testimonials-title" className="on-ink relative overflow-hidden bg-ink-2 text-on-ink">
-        <div className="container-x section relative">
+      <section id="testimonial" aria-labelledby="testimonials-title" className="on-ink bg-ink text-on-ink">
+        <div className="container-x section">
           <SectionHeading
-            tone="ink"
             eyebrow="Testimonials"
             title={<span id="testimonials-title">In the words of the people I have worked with</span>}
           />
@@ -79,6 +78,9 @@ export default function LeadershipPage() {
             </Button>
             <Button href={cta.consult.href} variant="outline-light">
               {cta.consult.label}
+            </Button>
+            <Button href={site.linkedin} variant="outline-light" icon="external" ariaLabel="LinkedIn (opens in a new tab)">
+              LinkedIn
             </Button>
           </>
         }

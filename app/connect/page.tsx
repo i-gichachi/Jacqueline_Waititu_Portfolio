@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import { ConnectIntro } from '../../components/connect/ConnectIntro.tsx';
 import { Booking } from '../../components/connect/Booking.tsx';
 import { NextSteps } from '../../components/connect/NextSteps.tsx';
+import { hasBookingLink } from '../../content/site.ts';
 
-const description =
-  'Book a consultation with me about senior operations roles or advisory work. Calendly booking, email, phone, LinkedIn and my CV.';
+const description = `Book a consultation with me about senior operations roles or advisory work. ${
+  hasBookingLink ? 'Calendly booking, email' : 'Email'
+}, phone, LinkedIn and my CV.`;
 
 export const metadata: Metadata = {
   title: 'Book a Consultation',

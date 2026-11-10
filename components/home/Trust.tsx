@@ -10,7 +10,7 @@ export function Trust() {
       <div className="container-x">
         <SectionHeading
           eyebrow="Sectors and organisations"
-          title={<span id="trust-title">Operations leadership across five demanding sectors</span>}
+          title={<span id="trust-title">Leadership in outsourcing, online platforms and Trust &amp; Safety</span>}
         />
 
         {/* Phones: compact cards. md to xl: full-width ledger rows. xl: five equal columns sharing rows (subgrid). */}
@@ -24,15 +24,15 @@ export function Trust() {
             >
               <div className="flex items-center gap-4 md:col-span-4 xl:col-span-1 xl:flex-col xl:items-start">
                 <IconTile name={s.icon} tone={i % 2 ? 'brick' : 'olive'} />
-                <h3 className="font-display text-[1.15rem] leading-snug xl:text-[1.08rem]">{s.title}</h3>
+                <h3 className="max-w-full font-display text-h4">{s.title}</h3>
               </div>
-              <p className="text-[0.9rem] text-muted md:col-span-5 xl:col-span-1 xl:text-[0.86rem]">{s.body}</p>
+              <p className="text-body-sm text-muted md:col-span-5 xl:col-span-1">{s.body}</p>
               <ul
-                className="flex flex-col gap-1 border-t border-line pt-3 md:col-span-3 md:border-t-0 md:border-l md:pt-0 md:pl-6 xl:col-span-1 xl:border-t xl:border-l-0 xl:pt-4 xl:pl-0"
+                className="flex flex-col gap-1 pt-1 md:col-span-3 md:pt-0 xl:col-span-1 xl:pt-2"
                 aria-label="Organisations"
               >
                 {s.orgs.map((o) => (
-                  <li key={o} className="text-[0.8rem] leading-snug font-semibold text-olive">
+                  <li key={o} className="text-small font-semibold text-olive">
                     {o}
                   </li>
                 ))}
@@ -41,19 +41,20 @@ export function Trust() {
           ))}
         </ul>
 
-        <Reveal className="mt-10 grid gap-5 border-t border-line pt-8 lg:mt-14 lg:grid-cols-12 lg:gap-8">
-          <h3 className="eyebrow lg:col-span-3 lg:self-start lg:pt-5">Organisations and institutions</h3>
-          <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-(--radius-card) border border-line bg-line md:grid-cols-4 lg:col-span-9">
-            {organisations.map((o) => (
-              <li
-                key={o}
-                className="flex min-h-20 items-center justify-center bg-paper px-3 py-4 text-center font-display text-[0.98rem] leading-snug text-text/85 transition-colors duration-300 hover:bg-surface hover:text-brick sm:text-[1.08rem]"
-              >
-                {o}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:mt-14 lg:grid-cols-12 lg:gap-12">
+          {organisations.map((g) => (
+            <div key={g.label} className={g.label === 'Employers' ? 'sm:col-span-2 lg:col-span-6' : 'lg:col-span-3'}>
+              <h3 className="eyebrow">{g.label}</h3>
+              <ul className={`mt-4 grid gap-x-10 gap-y-2.5 ${g.names.length > 2 ? 'sm:grid-cols-2' : ''}`}>
+                {g.names.map((o) => (
+                  <li key={o} className="font-display text-h4 text-text">
+                    {o}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ export function LoadCalendarButton({ className = '' }: { className?: string }) {
     <button
       type="button"
       onClick={() => window.dispatchEvent(new Event(LOAD_EVENT))}
-      className={`group inline-flex min-h-11 items-center justify-center gap-2 rounded-(--radius-btn) bg-olive px-5 py-2.5 text-sm font-semibold tracking-[0.01em] whitespace-nowrap text-on-ink shadow-[0_8px_20px_-10px_rgb(85_107_47/0.6)] transition-all duration-300 ease-(--ease-out-expo) hover:-translate-y-0.5 hover:bg-olive-600 active:scale-[0.98] sm:px-6 ${className}`}
+      className={`group inline-flex min-h-11 items-center justify-center gap-2 rounded-(--radius-btn) bg-olive px-5 py-2.5 text-small font-semibold tracking-[0.01em] whitespace-nowrap text-on-ink transition-all duration-300 ease-(--ease-out-expo) hover:-translate-y-0.5 hover:bg-olive-600 active:scale-[0.98] sm:px-6 ${className}`}
     >
       <CalendarDays aria-hidden="true" className="size-4 shrink-0" strokeWidth={2} />
       Load the calendar
