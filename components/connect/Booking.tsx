@@ -1,7 +1,6 @@
 import { CalendarDays, ChevronLeft, ChevronRight, Globe, Video } from 'lucide-react';
-import { cta, hasBookingLink, site } from '../../content/site.ts';
+import { hasBookingLink, site } from '../../content/site.ts';
 import Link from 'next/link';
-import { Button } from '../ui/Button.tsx';
 import { CalendlyGate, LoadCalendarButton } from './CalendlyGate.tsx';
 import { Reveal } from '../motion/Reveal.tsx';
 import { SectionHeading } from '../ui/SectionHeading.tsx';
@@ -50,16 +49,6 @@ function Placeholder({ gated = false }: { gated?: boolean }) {
         </div>
         <div className="flex flex-col gap-3 lg:mt-auto">
           {gated && <LoadCalendarButton className="w-full" />}
-          <Button
-            href={site.calendly}
-            external
-            icon="external"
-            variant={gated ? 'secondary' : 'primary'}
-            className="w-full"
-            ariaLabel={`${cta.consult.label} (opens Calendly in a new tab)`}
-          >
-            {cta.consult.label}
-          </Button>
           {gated && (
             <p className="text-small text-muted">
               Loading the calendar lets Calendly set its own cookies. See the{' '}

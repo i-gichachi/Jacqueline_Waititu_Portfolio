@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import { cta, legalNav, nav, site } from '../../content/site.ts';
 import { LinkedInMark } from '../ui/LinkedInMark.tsx';
 import { CookieSettingsLink } from './CookieBanner.tsx';
+import { ConsultLink } from './ConsultLink.tsx';
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -20,9 +21,7 @@ export function Footer() {
             Building, scaling and integrating operations that stay steady through growth, acquisition and change.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link href={cta.consult.href} className="inline-flex min-h-11 items-center rounded-full bg-olive px-5 text-small font-semibold hover:bg-olive-600">
-              {cta.consult.label}
-            </Link>
+            <ConsultLink className="inline-flex min-h-11 items-center rounded-full bg-olive px-5 text-small font-semibold hover:bg-olive-600" />
             <a href={site.cv} download className="inline-flex min-h-11 items-center rounded-full border border-on-ink/30 px-5 text-small font-semibold hover:border-on-ink">
               {cta.cv.label}
             </a>

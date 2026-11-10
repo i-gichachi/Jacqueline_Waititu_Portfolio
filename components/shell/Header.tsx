@@ -13,6 +13,7 @@ import { cta, nav, site } from '../../content/site.ts';
  */
 export function Header() {
   const pathname = usePathname();
+  const onConnect = pathname === '/connect';
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const overInk = pathname === '/' && !scrolled && !open;
@@ -64,12 +65,12 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <Link
+          {!onConnect && <Link
             href={cta.consult.href}
             className="ml-3 inline-flex min-h-11 items-center rounded-full bg-olive px-5 text-small font-semibold text-on-ink transition-colors hover:bg-olive-600"
           >
             {cta.consult.label}
-          </Link>
+          </Link>}
         </nav>
 
         <button
@@ -105,9 +106,11 @@ export function Header() {
             ))}
           </ul>
           <div className="mt-8 grid gap-3">
-            <Link href={cta.consult.href} className="inline-flex min-h-12 items-center justify-center rounded-full bg-olive px-6 font-semibold">
-              {cta.consult.label}
-            </Link>
+            {!onConnect && (
+              <Link href={cta.consult.href} className="inline-flex min-h-12 items-center justify-center rounded-full bg-olive px-6 font-semibold">
+                {cta.consult.label}
+              </Link>
+            )}
             <a href={site.cv} download className="inline-flex min-h-12 items-center justify-center rounded-full border border-on-ink/30 px-6 font-semibold">
               {cta.cv.label}
             </a>

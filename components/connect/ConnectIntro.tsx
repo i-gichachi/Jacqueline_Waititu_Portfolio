@@ -1,6 +1,5 @@
 import { CheckCircle2 } from 'lucide-react';
 import { cta, hasBookingLink, site } from '../../content/site.ts';
-import { Button } from '../ui/Button.tsx';
 
 const topics = [
   'General Manager and Head of Operations roles',
@@ -65,11 +64,6 @@ export function ConnectIntro() {
                 </li>
               ))}
             </ul>
-            {hasBookingLink && (
-              <div className="mt-8">
-                <Button href="#booking">{cta.consult.label}</Button>
-              </div>
-            )}
           </div>
         </div>
       </div>
