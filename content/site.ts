@@ -18,7 +18,7 @@ export const site = {
   calendly: 'https://calendly.com',
   cv: '/jacqueline-waititu-cv.pdf',
   /** Path to her portrait in /public once supplied, e.g. '/jacqueline-waititu.jpg'. Null shows the framed placeholder. */
-  portrait: null as string | null,
+  portrait: '/jacqueline-waititu.jpg' as string | null,
   responseTime: 'Replies within 24 to 48 hours',
   url: (process.env.SITE_URL ?? 'https://jacqueline-waititu.vercel.app').replace(/\/$/, ''),
   description:
