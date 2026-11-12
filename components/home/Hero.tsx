@@ -11,8 +11,8 @@ const rise = 'animate-[heroRise_0.8s_var(--ease-out-expo)_both] [animation-delay
 const d = (ms: number) => ({ '--d': `${ms}ms` }) as CSSProperties;
 
 /**
- * Home hero on ink. Phones: name and role first, then the two actions, then a 4:5 portrait, all inside
- * one screen at 390 x 844. From lg: text left, portrait right.
+ * Home hero on ink. Phones: a 4:5 portrait directly under the navbar, then name and role, then the two actions,
+ * all inside one screen at 390 x 844. From lg: text left, portrait right.
  */
 export function Hero() {
   const [first, ...rest] = site.name.split(' ');
@@ -42,7 +42,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className={`hidden lg:block lg:col-span-5 lg:w-full lg:max-w-none lg:pl-8 ${rise}`} style={d(120)}>
+        <div className={`order-first w-full max-w-[13rem] lg:order-none lg:col-span-5 lg:max-w-none lg:pl-8 ${rise}`} style={d(120)}>
           <Portrait priority />
         </div>
       </div>
